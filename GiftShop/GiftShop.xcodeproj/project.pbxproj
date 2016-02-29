@@ -85,6 +85,7 @@
 		37FB26971C8468040003F3D3 /* GSMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26961C8468040003F3D3 /* GSMineController.m */; };
 		37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26991C84684D0003F3D3 /* UIView+GSExtenssion.m */; };
 		37FB26A01C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB269F1C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m */; };
+		37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26A21C8470120003F3D3 /* GSTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -247,6 +248,8 @@
 		37FB26991C84684D0003F3D3 /* UIView+GSExtenssion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GSExtenssion.m"; sourceTree = "<group>"; };
 		37FB269E1C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GSExtenssion.h"; sourceTree = "<group>"; };
 		37FB269F1C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GSExtenssion.m"; sourceTree = "<group>"; };
+		37FB26A11C8470120003F3D3 /* GSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTabBarController.h; sourceTree = "<group>"; };
+		37FB26A21C8470120003F3D3 /* GSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -718,6 +721,8 @@
 			children = (
 				37FB26891C8467BC0003F3D3 /* GSNavViewController.h */,
 				37FB268A1C8467BC0003F3D3 /* GSNavViewController.m */,
+				37FB26A11C8470120003F3D3 /* GSTabBarController.h */,
+				37FB26A21C8470120003F3D3 /* GSTabBarController.m */,
 			);
 			path = "Main(主要)";
 			sourceTree = "<group>";
@@ -826,6 +831,7 @@
 				37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */,
 				37FB266A1C8466AF0003F3D3 /* MKAnnotationView+WebCache.m in Sources */,
 				37FB26391C8466A50003F3D3 /* MJRefreshHeader.m in Sources */,
+				37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
 				37FB26461C8466A50003F3D3 /* UIScrollView+MJRefresh.m in Sources */,
@@ -1014,6 +1020,7 @@
 				37FB25951C8465960003F3D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
