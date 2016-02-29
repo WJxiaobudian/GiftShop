@@ -7,16 +7,62 @@
 //
 
 #import "GSTabBarController.h"
-
+#import "GSGiftShopController.h"
+#import "GSHotController.h"
+#import "GSCategoryController.h"
+#import "GSMineController.h"
+#import "GSNavViewController.h"
 @interface GSTabBarController ()
 
 @end
 
 @implementation GSTabBarController
 
++ (void)initialize {
+    
+    UITabBar *tabBar = [UITabBar appearance];
+    [tabBar setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
+    
+    UITabBarItem *appearance = [UITabBarItem appearance];
+    [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor grayColor]} forState:UIControlStateNormal];
+    [appearance setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor darkGrayColor]} forState:UIControlStateSelected];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self setupChild];
+}
+
+
+- (void)setupChild {
+    
+    GSGiftShopController *giftShop = [[GSGiftShopController alloc] init];
+    [self setupController:giftShop title:@"礼品屋" stateImage:@"tabBar_essence_icon" highImage:@"tabBar_essence_click_icon"];
+    
+    GSHotController *hot = [[GSHotController alloc] init];
+    [self setupController:hot title:@"热门" stateImage:@"tabBar_new_icon" highImage:@"tabBar_new_click_icon"];
+    
+    GSCategoryController *category = [[GSCategoryController alloc] init];
+    [self setupController:category title:@"分类" stateImage:@"tabBar_me_icon" highImage:@"tabBar_me_click_icon"];
+    
+    GSMineController *mine = [[GSMineController alloc] init];
+    [self setupController:mine title:@"我的" stateImage:@"tabBar_friendTrends_icon" highImage:@"tabBar_friendTrends_click_icon"];
+    
+}
+
+- (void)setupController:(UIViewController *)vc title:(NSString *)title stateImage:(NSString *)image highImage:(NSString *)highImage {
+    
+    GSNavViewController *nav = [[GSNavViewController alloc] initWithRootViewController:vc];
+    
+    vc.title = title;
+    
+    vc.tabBarItem.image = [UIImage imageNamed:image];
+    
+    vc.tabBarItem.selectedImage = [UIImage imageNamed:highImage];
+    
+    [self addChildViewController:nav];
 }
 
 - (void)didReceiveMemoryWarning {

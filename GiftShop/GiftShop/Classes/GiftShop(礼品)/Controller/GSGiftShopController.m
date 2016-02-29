@@ -7,22 +7,169 @@
 //
 
 #import "GSGiftShopController.h"
+#import "GSSearchController.h"
+#import "GSTitleLabel.h"
+
+/* 小的滚动菜单栏的高度 */
+#define ScrollerWidth 40
+
+#define ScreenWidth   [UIScreen mainScreen].bounds.size.width
 
 @interface GSGiftShopController ()
+
+/**
+ *  礼品屋scrollView 的借口数组
+ */
+@property (nonatomic, strong) NSArray *topics;
+
+/**
+ *  小的滚动视图
+ */
+@property (nonatomic, strong) UIScrollView *smallScrollView;
+
 
 @end
 
 @implementation GSGiftShopController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+/** 懒加载*/
+- (NSArray *)topics {
+    if (!_topics) {
+        _topics = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GiftShop" ofType:@"plist"]];
+    }
+    NSLog(@"%@",_topics);
+    return _topics;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"204"] style:UIBarButtonItemStylePlain target:self action:@selector(rightClick)];
+    
+    [self setupScrollView];
 }
+
+
+- (void)rightClick {
+    
+    GSSearchController *search = [[GSSearchController alloc] init];
+    
+    [self.navigationController pushViewController:search animated:YES];
+    
+}
+
+- (void)setupScrollView {
+    
+    // 关闭自动调整视图， 默认为YES
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+#pragma mark --- 添加视图
+    UIScrollView *smallScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScrollerWidth)];
+    
+    
+    [self.view addSubview:smallScrollView];
+    
+    smallScrollView.showsHorizontalScrollIndicator = NO;
+    smallScrollView.showsVerticalScrollIndicator = NO;
+    
+    self.smallScrollView = smallScrollView;
+
+    
+    [self addLabel];
+    
+}
+
+- (void)addLabel {
+    
+    CGFloat labelWidth = 70;
+    CGFloat labelHeight = 40;
+    
+    /* 第一个标签的坐标 */
+    CGFloat labelX = 0;
+    CGFloat labelY = 0;
+    
+    /* 设置每一个标签的坐标 */
+    for (int i = 0; i < self.topics.count; i ++) {
+        labelX = i * labelWidth;
+        
+        GSTitleLabel *label = [[GSTitleLabel alloc] initWithFrame:CGRectMake(labelX, labelY, labelWidth, labelHeight)];
+        
+        label.text = self.topics[i][@"title"];
+        
+        label.font = [UIFont systemFontOfSize:19];
+        
+        [self.smallScrollView addSubview:label];
+        
+        label.tag = i;
+        
+        label.userInteractionEnabled = YES;
+        
+        [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
+    }
+    self.smallScrollView.contentSize = CGSizeMake(self.topics.count * labelWidth, 0);
+}
+
+- (void)labelClick:(UIGestureRecognizer *)recognizer {
+    
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
+    return 0;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    return 0;
+}
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
+
+/*
+// Override to support conditional editing of the table view.
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the specified item to be editable.
+    return YES;
+}
+*/
+
+/*
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        // Delete the row from the data source
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }   
+}
+*/
+
+/*
+// Override to support rearranging the table view.
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+}
+*/
+
+/*
+// Override to support conditional rearranging of the table view.
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
+*/
 
 /*
 #pragma mark - Navigation

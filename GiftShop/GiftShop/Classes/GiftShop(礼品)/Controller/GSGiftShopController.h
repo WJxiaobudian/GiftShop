@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GSGiftShopController : UIViewController
+@interface GSGiftShopController : UITableViewController
+
+@property (nonatomic, copy) NSString *urlString;
 
 @end

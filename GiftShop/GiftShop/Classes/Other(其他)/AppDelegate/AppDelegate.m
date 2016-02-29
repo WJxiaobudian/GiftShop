@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "GSTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,6 +18,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // Override point for customization after application launch.
+   
+    self.window = [[UIWindow alloc] init];
+   
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+     [self.window  makeKeyAndVisible];
+    
+    GSTabBarController *tab = [[GSTabBarController alloc] init];
+    self.window.rootViewController = tab;
+    
     return YES;
 }
 
