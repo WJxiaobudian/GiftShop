@@ -7,18 +7,29 @@
 //
 
 #import "GSCategoryController.h"
+#import "UIView+GSExtenssion.h"
+
+#define intervil  124
 
 @interface GSCategoryController ()
 
+@property (nonatomic,strong)UISegmentedControl *segment;
 @end
 
 @implementation GSCategoryController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"dsasad");
+//    CGFloat intervel = 124;
+//
+    self.segment = [[UISegmentedControl alloc]initWithItems:@[@"攻略",@"礼物"]];
+    self.segment.frame = CGRectMake(0, 20,self.view.frame.size.width - intervil *2,30);
+    self.segment.selectedSegmentIndex = 0;
+    self.navigationItem.titleView  = self.segment;
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)didReceiveMemoryWarning {
