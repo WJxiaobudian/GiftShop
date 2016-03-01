@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37420C6B1C8520B4002CE740 /* GSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C6A1C8520B4002CE740 /* GSTitleLabel.m */; };
+		37420C6E1C8523AA002CE740 /* GSHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C6D1C8523AA002CE740 /* GSHotModel.m */; };
+		37420C721C8523D3002CE740 /* GSHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C701C8523D3002CE740 /* GSHotCell.m */; };
+		37420C731C8523D3002CE740 /* GSHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37420C711C8523D3002CE740 /* GSHotCell.xib */; };
+		37420C761C8523EA002CE740 /* GSCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C751C8523EA002CE740 /* GSCategoryModel.m */; };
+		37420C791C8523F8002CE740 /* GSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C781C8523F8002CE740 /* GSCategory.m */; };
+		37420C7C1C852409002CE740 /* GSMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7B1C852409002CE740 /* GSMine.m */; };
 		37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB25881C8465960003F3D3 /* Main.storyboard */; };
 		37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB258D1C8465960003F3D3 /* LaunchScreen.storyboard */; };
 		37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25AA1C84663A0003F3D3 /* AppDelegate.m */; };
@@ -88,10 +95,22 @@
 		37FB26AA1C8482730003F3D3 /* GSGiftShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26A91C8482730003F3D3 /* GSGiftShopController.m */; };
 		37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26AE1C8487570003F3D3 /* GSSearchController.m */; };
 		37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FB26B01C8489540003F3D3 /* GiftShop.plist */; };
-		37FB26BA1C848DE40003F3D3 /* GSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26B91C848DE40003F3D3 /* GSTitleLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37420C691C8520B4002CE740 /* GSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTitleLabel.h; sourceTree = "<group>"; };
+		37420C6A1C8520B4002CE740 /* GSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTitleLabel.m; sourceTree = "<group>"; };
+		37420C6C1C8523AA002CE740 /* GSHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotModel.h; sourceTree = "<group>"; };
+		37420C6D1C8523AA002CE740 /* GSHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotModel.m; sourceTree = "<group>"; };
+		37420C6F1C8523D3002CE740 /* GSHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotCell.h; sourceTree = "<group>"; };
+		37420C701C8523D3002CE740 /* GSHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotCell.m; sourceTree = "<group>"; };
+		37420C711C8523D3002CE740 /* GSHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHotCell.xib; sourceTree = "<group>"; };
+		37420C741C8523EA002CE740 /* GSCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCategoryModel.h; sourceTree = "<group>"; };
+		37420C751C8523EA002CE740 /* GSCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCategoryModel.m; sourceTree = "<group>"; };
+		37420C771C8523F8002CE740 /* GSCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCategory.h; sourceTree = "<group>"; };
+		37420C781C8523F8002CE740 /* GSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCategory.m; sourceTree = "<group>"; };
+		37420C7A1C852409002CE740 /* GSMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMine.h; sourceTree = "<group>"; };
+		37420C7B1C852409002CE740 /* GSMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMine.m; sourceTree = "<group>"; };
 		37FB257C1C8465960003F3D3 /* GiftShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB25891C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37FB258E1C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -256,8 +275,6 @@
 		37FB26AD1C8487570003F3D3 /* GSSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSearchController.h; sourceTree = "<group>"; };
 		37FB26AE1C8487570003F3D3 /* GSSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSearchController.m; sourceTree = "<group>"; };
 		37FB26B01C8489540003F3D3 /* GiftShop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GiftShop.plist; sourceTree = "<group>"; };
-		37FB26B81C848DE40003F3D3 /* GSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSTitleLabel.h; path = "../../Home(首页)/View/GSTitleLabel.h"; sourceTree = "<group>"; };
-		37FB26B91C848DE40003F3D3 /* GSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSTitleLabel.m; path = "../../Home(首页)/View/GSTitleLabel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,6 +362,8 @@
 		37FB25991C84663A0003F3D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37420C741C8523EA002CE740 /* GSCategoryModel.h */,
+				37420C751C8523EA002CE740 /* GSCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +371,8 @@
 		37FB259A1C84663A0003F3D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37420C771C8523F8002CE740 /* GSCategory.h */,
+				37420C781C8523F8002CE740 /* GSCategory.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,8 +406,8 @@
 		37FB259E1C84663A0003F3D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				37FB26B81C848DE40003F3D3 /* GSTitleLabel.h */,
-				37FB26B91C848DE40003F3D3 /* GSTitleLabel.m */,
+				37420C691C8520B4002CE740 /* GSTitleLabel.h */,
+				37420C6A1C8520B4002CE740 /* GSTitleLabel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +434,8 @@
 		37FB25A11C84663A0003F3D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37420C6C1C8523AA002CE740 /* GSHotModel.h */,
+				37420C6D1C8523AA002CE740 /* GSHotModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -420,6 +443,9 @@
 		37FB25A21C84663A0003F3D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37420C6F1C8523D3002CE740 /* GSHotCell.h */,
+				37420C701C8523D3002CE740 /* GSHotCell.m */,
+				37420C711C8523D3002CE740 /* GSHotCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +479,8 @@
 		37FB25A61C84663A0003F3D3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				37420C7A1C852409002CE740 /* GSMine.h */,
+				37420C7B1C852409002CE740 /* GSMine.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -816,6 +844,7 @@
 			files = (
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
+				37420C731C8523D3002CE740 /* GSHotCell.xib in Resources */,
 				37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */,
 				37FB26431C8466A50003F3D3 /* MJRefresh.bundle in Resources */,
 				37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */,
@@ -835,6 +864,7 @@
 				37FB25CB1C84667D0003F3D3 /* AFURLRequestSerialization.m in Sources */,
 				37FB26771C8466AF0003F3D3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				37FB25CA1C84667D0003F3D3 /* AFURLConnectionOperation.m in Sources */,
+				37420C6B1C8520B4002CE740 /* GSTitleLabel.m in Sources */,
 				37FB26361C8466A50003F3D3 /* MJRefreshBackFooter.m in Sources */,
 				37FB25E21C8466880003F3D3 /* UIAlertView+AFNetworking.m in Sources */,
 				37FB25C91C84667D0003F3D3 /* AFSecurityPolicy.m in Sources */,
@@ -844,10 +874,12 @@
 				37FB25C51C84667D0003F3D3 /* AFHTTPRequestOperation.m in Sources */,
 				37FB25CD1C84667D0003F3D3 /* AFURLSessionManager.m in Sources */,
 				37FB26471C8466A50003F3D3 /* UIView+MJExtension.m in Sources */,
+				37420C6E1C8523AA002CE740 /* GSHotModel.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
 				37FB26441C8466A50003F3D3 /* MJRefreshConst.m in Sources */,
 				37FB26781C8466AF0003F3D3 /* UIImageView+WebCache.m in Sources */,
 				37FB26451C8466A50003F3D3 /* UIScrollView+MJExtension.m in Sources */,
+				37420C7C1C852409002CE740 /* GSMine.m in Sources */,
 				37FB26711C8466AF0003F3D3 /* SDWebImageManager.m in Sources */,
 				37FB266B1C8466AF0003F3D3 /* NSData+ImageContentType.m in Sources */,
 				37FB263C1C8466A50003F3D3 /* MJRefreshAutoStateFooter.m in Sources */,
@@ -862,10 +894,10 @@
 				37FB266A1C8466AF0003F3D3 /* MKAnnotationView+WebCache.m in Sources */,
 				37FB26391C8466A50003F3D3 /* MJRefreshHeader.m in Sources */,
 				37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */,
-				37FB26BA1C848DE40003F3D3 /* GSTitleLabel.m in Sources */,
 				37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
+				37420C761C8523EA002CE740 /* GSCategoryModel.m in Sources */,
 				37FB26461C8466A50003F3D3 /* UIScrollView+MJRefresh.m in Sources */,
 				37FB26351C8466A50003F3D3 /* MJRefreshAutoFooter.m in Sources */,
 				37FB25E51C8466880003F3D3 /* UIProgressView+AFNetworking.m in Sources */,
@@ -892,6 +924,7 @@
 				37FB26381C8466A50003F3D3 /* MJRefreshFooter.m in Sources */,
 				37FB26701C8466AF0003F3D3 /* SDWebImageDownloaderOperation.m in Sources */,
 				37FB25E71C8466880003F3D3 /* UIWebView+AFNetworking.m in Sources */,
+				37420C721C8523D3002CE740 /* GSHotCell.m in Sources */,
 				37FB26941C8467FA0003F3D3 /* GSCategoryController.m in Sources */,
 				37FB26751C8466AF0003F3D3 /* UIImage+MultiFormat.m in Sources */,
 				37FB26791C8466AF0003F3D3 /* UIView+WebCacheOperation.m in Sources */,
@@ -906,6 +939,7 @@
 				37FB26001C84669C0003F3D3 /* MJProperty.m in Sources */,
 				37FB26911C8467ED0003F3D3 /* GSHotController.m in Sources */,
 				37FB266C1C8466AF0003F3D3 /* SDImageCache.m in Sources */,
+				37420C791C8523F8002CE740 /* GSCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
