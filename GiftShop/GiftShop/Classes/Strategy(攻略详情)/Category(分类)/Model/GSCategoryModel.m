@@ -9,5 +9,8 @@
 #import "GSCategoryModel.h"
 
 @implementation GSCategoryModel
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
 
 @end

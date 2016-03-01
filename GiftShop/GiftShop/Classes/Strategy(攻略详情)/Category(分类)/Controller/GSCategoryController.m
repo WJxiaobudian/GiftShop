@@ -8,11 +8,13 @@
 
 #import "GSCategoryController.h"
 #import "UIView+GSExtenssion.h"
-
+#import "GSStrategyViewController.h"
+#import "PresentViewController.h"
 #define intervil  124
 
 @interface GSCategoryController ()
-
+@property (nonatomic,strong)GSStrategyViewController *svc;
+@property (nonatomic,strong)PresentViewController *pvc;
 @property (nonatomic,strong)UISegmentedControl *segment;
 @end
 
@@ -27,9 +29,30 @@
     self.segment.frame = CGRectMake(0, 20,self.view.frame.size.width - intervil *2,30);
     self.segment.selectedSegmentIndex = 0;
     self.navigationItem.titleView  = self.segment;
+    
+    [self.segment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
     // Do any additional setup after loading the view.
     
+    self.svc = [[GSStrategyViewController alloc] init];
+    self.pvc = [[PresentViewController alloc] init];
+    [self.view addSubview:self.pvc.view];
+    [self.view addSubview:self.svc.view];
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+
+- (void)segmentAction:(UISegmentedControl *)segment {
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            [self.view bringSubviewToFront:self.svc.view];
+            
+            break;
+        case 1:
+            [self.view bringSubviewToFront:self.pvc.view];
+        default:
+            break;
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

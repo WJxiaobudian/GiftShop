@@ -10,4 +10,6 @@
 
 @interface GSCategoryModel : NSObject
 
+@property (nonatomic,copy)NSString *banner_image_url;
+
 @end
