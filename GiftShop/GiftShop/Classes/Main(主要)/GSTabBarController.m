@@ -7,7 +7,7 @@
 //
 
 #import "GSTabBarController.h"
-#import "GSGiftShopController.h"
+#import "GSGiftShopViewController.h"
 #import "GSHotController.h"
 #import "GSCategoryController.h"
 #import "GSMineController.h"
@@ -38,7 +38,7 @@
 
 - (void)setupChild {
     
-    GSGiftShopController *giftShop = [[GSGiftShopController alloc] init];
+    GSGiftShopViewController *giftShop = [[GSGiftShopViewController alloc] init];
     [self setupController:giftShop title:@"礼品屋" stateImage:@"tabBar_essence_icon" highImage:@"tabBar_essence_click_icon"];
     
     GSHotController *hot = [[GSHotController alloc] init];

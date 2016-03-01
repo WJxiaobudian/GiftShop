@@ -14,6 +14,12 @@
 		37420C761C8523EA002CE740 /* GSCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C751C8523EA002CE740 /* GSCategoryModel.m */; };
 		37420C791C8523F8002CE740 /* GSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C781C8523F8002CE740 /* GSCategory.m */; };
 		37420C7C1C852409002CE740 /* GSMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7B1C852409002CE740 /* GSMine.m */; };
+		37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7E1C853219002CE740 /* GSGiftShopViewController.m */; };
+		37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C811C857027002CE740 /* GSGiftShopCell.m */; };
+		37420C841C857027002CE740 /* GSGiftShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37420C821C857027002CE740 /* GSGiftShopCell.xib */; };
+		37420C861C857843002CE740 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C851C857843002CE740 /* Foundation+Log.m */; };
+		37420C891C857879002CE740 /* GSGiftShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C881C857879002CE740 /* GSGiftShop.m */; };
+		37420C911C8592E6002CE740 /* GSStrategyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C901C8592E6002CE740 /* GSStrategyController.m */; };
 		37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB25881C8465960003F3D3 /* Main.storyboard */; };
 		37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB258D1C8465960003F3D3 /* LaunchScreen.storyboard */; };
 		37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25AA1C84663A0003F3D3 /* AppDelegate.m */; };
@@ -111,6 +117,16 @@
 		37420C781C8523F8002CE740 /* GSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCategory.m; sourceTree = "<group>"; };
 		37420C7A1C852409002CE740 /* GSMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMine.h; sourceTree = "<group>"; };
 		37420C7B1C852409002CE740 /* GSMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMine.m; sourceTree = "<group>"; };
+		37420C7D1C853219002CE740 /* GSGiftShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopViewController.h; sourceTree = "<group>"; };
+		37420C7E1C853219002CE740 /* GSGiftShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopViewController.m; sourceTree = "<group>"; };
+		37420C801C857027002CE740 /* GSGiftShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopCell.h; sourceTree = "<group>"; };
+		37420C811C857027002CE740 /* GSGiftShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopCell.m; sourceTree = "<group>"; };
+		37420C821C857027002CE740 /* GSGiftShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSGiftShopCell.xib; sourceTree = "<group>"; };
+		37420C851C857843002CE740 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		37420C871C857879002CE740 /* GSGiftShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShop.h; sourceTree = "<group>"; };
+		37420C881C857879002CE740 /* GSGiftShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShop.m; sourceTree = "<group>"; };
+		37420C8F1C8592E6002CE740 /* GSStrategyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStrategyController.h; sourceTree = "<group>"; };
+		37420C901C8592E6002CE740 /* GSStrategyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStrategyController.m; sourceTree = "<group>"; };
 		37FB257C1C8465960003F3D3 /* GiftShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB25891C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37FB258E1C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -288,6 +304,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37420C8A1C859263002CE740 /* Strategy(攻略详情) */ = {
+			isa = PBXGroup;
+			children = (
+				37420C931C859951002CE740 /* View */,
+				37420C921C859949002CE740 /* Model  */,
+				37420C8B1C859263002CE740 /* Controller */,
+			);
+			path = "Strategy(攻略详情)";
+			sourceTree = "<group>";
+		};
+		37420C8B1C859263002CE740 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37420C8F1C8592E6002CE740 /* GSStrategyController.h */,
+				37420C901C8592E6002CE740 /* GSStrategyController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37420C921C859949002CE740 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
+		37420C931C859951002CE740 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37FB25731C8465960003F3D3 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +378,7 @@
 		37FB25961C84663A0003F3D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37420C8A1C859263002CE740 /* Strategy(攻略详情) */,
 				37FB26AB1C8487170003F3D3 /* Search(搜索) */,
 				37FB259B1C84663A0003F3D3 /* GiftShop(礼品) */,
 				37FB259F1C84663A0003F3D3 /* Hot(热门) */,
@@ -392,6 +442,8 @@
 			children = (
 				37FB26A81C8482730003F3D3 /* GSGiftShopController.h */,
 				37FB26A91C8482730003F3D3 /* GSGiftShopController.m */,
+				37420C7D1C853219002CE740 /* GSGiftShopViewController.h */,
+				37420C7E1C853219002CE740 /* GSGiftShopViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,6 +451,8 @@
 		37FB259D1C84663A0003F3D3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				37420C871C857879002CE740 /* GSGiftShop.h */,
+				37420C881C857879002CE740 /* GSGiftShop.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -408,6 +462,9 @@
 			children = (
 				37420C691C8520B4002CE740 /* GSTitleLabel.h */,
 				37420C6A1C8520B4002CE740 /* GSTitleLabel.m */,
+				37420C801C857027002CE740 /* GSGiftShopCell.h */,
+				37420C811C857027002CE740 /* GSGiftShopCell.m */,
+				37420C821C857027002CE740 /* GSGiftShopCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +576,7 @@
 		37FB25AD1C84663A0003F3D3 /* Lib(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				37420C851C857843002CE740 /* Foundation+Log.m */,
 				37FB26481C8466AF0003F3D3 /* SDWebImage */,
 				37FB26081C8466A50003F3D3 /* MJRefresh */,
 				37FB25E81C84669C0003F3D3 /* MJExtension */,
@@ -816,6 +874,7 @@
 				TargetAttributes = {
 					37FB257B1C8465960003F3D3 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 96WL48P5S9;
 					};
 				};
 			};
@@ -843,6 +902,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
+				37420C841C857027002CE740 /* GSGiftShopCell.xib in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
 				37420C731C8523D3002CE740 /* GSHotCell.xib in Resources */,
 				37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */,
@@ -877,6 +937,7 @@
 				37420C6E1C8523AA002CE740 /* GSHotModel.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
 				37FB26441C8466A50003F3D3 /* MJRefreshConst.m in Sources */,
+				37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */,
 				37FB26781C8466AF0003F3D3 /* UIImageView+WebCache.m in Sources */,
 				37FB26451C8466A50003F3D3 /* UIScrollView+MJExtension.m in Sources */,
 				37420C7C1C852409002CE740 /* GSMine.m in Sources */,
@@ -897,6 +958,7 @@
 				37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
+				37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */,
 				37420C761C8523EA002CE740 /* GSCategoryModel.m in Sources */,
 				37FB26461C8466A50003F3D3 /* UIScrollView+MJRefresh.m in Sources */,
 				37FB26351C8466A50003F3D3 /* MJRefreshAutoFooter.m in Sources */,
@@ -906,6 +968,7 @@
 				37FB26051C84669C0003F3D3 /* NSObject+MJKeyValue.m in Sources */,
 				37FB25C61C84667D0003F3D3 /* AFHTTPRequestOperationManager.m in Sources */,
 				37FB26731C8466AF0003F3D3 /* UIButton+WebCache.m in Sources */,
+				37420C891C857879002CE740 /* GSGiftShop.m in Sources */,
 				37FB266D1C8466AF0003F3D3 /* SDWebImageCompat.m in Sources */,
 				37FB25E41C8466880003F3D3 /* UIImageView+AFNetworking.m in Sources */,
 				37FB26071C84669C0003F3D3 /* NSString+MJExtension.m in Sources */,
@@ -916,6 +979,7 @@
 				37FB26AA1C8482730003F3D3 /* GSGiftShopController.m in Sources */,
 				37FB263E1C8466A50003F3D3 /* MJRefreshBackNormalFooter.m in Sources */,
 				37FB266F1C8466AF0003F3D3 /* SDWebImageDownloader.m in Sources */,
+				37420C911C8592E6002CE740 /* GSStrategyController.m in Sources */,
 				37FB25E31C8466880003F3D3 /* UIButton+AFNetworking.m in Sources */,
 				37FB263A1C8466A50003F3D3 /* MJRefreshAutoGifFooter.m in Sources */,
 				37FB26741C8466AF0003F3D3 /* UIImage+GIF.m in Sources */,
@@ -928,6 +992,7 @@
 				37FB26941C8467FA0003F3D3 /* GSCategoryController.m in Sources */,
 				37FB26751C8466AF0003F3D3 /* UIImage+MultiFormat.m in Sources */,
 				37FB26791C8466AF0003F3D3 /* UIView+WebCacheOperation.m in Sources */,
+				37420C861C857843002CE740 /* Foundation+Log.m in Sources */,
 				37FB25FE1C84669C0003F3D3 /* MJExtensionConst.m in Sources */,
 				37FB26041C84669C0003F3D3 /* NSObject+MJCoding.m in Sources */,
 				37FB25C81C84667D0003F3D3 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1050,7 +1115,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/wj/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJ.GiftShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1062,7 +1130,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREFIX_HEADER = /Users/wj/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WJ.GiftShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";

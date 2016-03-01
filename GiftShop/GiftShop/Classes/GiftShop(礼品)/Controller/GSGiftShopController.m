@@ -8,141 +8,149 @@
 
 #import "GSGiftShopController.h"
 #import "GSSearchController.h"
-#import "GSTitleLabel.h"
-
-/* 小的滚动菜单栏的高度 */
-#define ScrollerWidth 40
-
-#define ScreenWidth   [UIScreen mainScreen].bounds.size.width
-
+#import "AFHTTPSessionManager.h"
+#import "AFNetworking.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "GSGiftShopCell.h"
+#import "GSGiftShop.h"
+#import "GSStrategyController.h"
 @interface GSGiftShopController ()
 
-/**
- *  礼品屋scrollView 的借口数组
- */
-@property (nonatomic, strong) NSArray *topics;
+@property (nonatomic, strong) NSMutableArray *giftShopArray;
 
-/**
- *  小的滚动视图
- */
-@property (nonatomic, strong) UIScrollView *smallScrollView;
+@property (nonatomic, assign) int offset;
 
+@property (nonatomic, strong) NSMutableDictionary *dict;
 
 @end
 
+static NSString *const giftShopID = @"GiftShop";
 @implementation GSGiftShopController
 
 
-/** 懒加载*/
-- (NSArray *)topics {
-    if (!_topics) {
-        _topics = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"GiftShop" ofType:@"plist"]];
+- (NSMutableArray *)giftShopArray {
+    if (!_giftShopArray) {
+        _giftShopArray = [NSMutableArray array];
     }
-    NSLog(@"%@",_topics);
-    return _topics;
+    return _giftShopArray;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+ 
+    [self setupNav];
+    self.urlString = self.urlString;
     
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"204"] style:UIBarButtonItemStylePlain target:self action:@selector(rightClick)];
+    [self setupRefresh];
     
-    [self setupScrollView];
 }
 
+- (void)setUrlString:(NSString *)urlString {
+    _urlString = urlString;
+}
+
+
+- (void)setupNav {
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"204"] style:UIBarButtonItemStyleDone target:self action:@selector(rightClick)];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GSGiftShopCell class]) bundle:nil] forCellReuseIdentifier:giftShopID];
+    
+}
 
 - (void)rightClick {
     
-    GSSearchController *search = [[GSSearchController alloc] init];
+}
+- (void)setupRefresh {
     
-    [self.navigationController pushViewController:search animated:YES];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewGift)];
     
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
+    
+    
+    self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreGift)];
+
 }
 
-- (void)setupScrollView {
+- (void)loadNewGift {
     
-    // 关闭自动调整视图， 默认为YES
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    [self.tableView.mj_footer endRefreshing];
+    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20&offset=0", self.urlString];
     
-#pragma mark --- 添加视图
-    UIScrollView *smallScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScrollerWidth)];
-    
-    
-    [self.view addSubview:smallScrollView];
-    
-    smallScrollView.showsHorizontalScrollIndicator = NO;
-    smallScrollView.showsVerticalScrollIndicator = NO;
-    
-    self.smallScrollView = smallScrollView;
+    [self.giftShopArray removeAllObjects];
+    [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *array = responseObject[@"data"];
+        for (NSDictionary *dict in array[@"items"]) {
+//
+            
+            GSGiftShop *giftShop = [[GSGiftShop alloc] initWithDict:dict];
+ 
+            
+            [self.giftShopArray addObject:giftShop];
+            [self.tableView reloadData];
+            [self.tableView.mj_header endRefreshing];
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
 
-    
-    [self addLabel];
-    
-    GSTitleLabel *titleLabel = [self.smallScrollView.subviews firstObject];
-    titleLabel.scale = 1.0;
-    
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
-- (void)addLabel {
+- (void)loadMoreGift {
+    [self.tableView.mj_header endRefreshing];
+    self.offset += 20;
+    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20&offset=%d", self.urlString, self.offset];
     
-    CGFloat labelWidth = 70;
-    CGFloat labelHeight = 40;
-    
-    /* 第一个标签的坐标 */
-    CGFloat labelX = 0;
-    CGFloat labelY = 0;
-    
-    /* 设置每一个标签的坐标 */
-    for (int i = 0; i < self.topics.count; i ++) {
-        labelX = i * labelWidth;
-        
-        GSTitleLabel *label = [[GSTitleLabel alloc] initWithFrame:CGRectMake(labelX, labelY, labelWidth, labelHeight)];
-        
-        label.text = self.topics[i][@"title"];
-        
-        label.font = [UIFont systemFontOfSize:19];
-        
-        [self.smallScrollView addSubview:label];
-        
-        label.tag = i;
-        
-        label.userInteractionEnabled = YES;
-        
-        [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
-    }
-    self.smallScrollView.contentSize = CGSizeMake(self.topics.count * labelWidth, 0);
-}
+    [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSDictionary *array = responseObject[@"data"];
+        for (NSDictionary *dict in array[@"items"]) {
+            GSGiftShop *giftShop = [[GSGiftShop alloc] initWithDict:dict];
 
-- (void)labelClick:(UIGestureRecognizer *)recognizer {
-    
-    GSTitleLabel *titleLabel = (GSTitleLabel *)recognizer.view;
-    
-    CGFloat offset;
-    
+            [self.giftShopArray addObject:giftShop];
+            [self.tableView reloadData];
+            [self.tableView.mj_footer endRefreshing];
+            
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        self.offset -= 20;
+        [self.tableView.mj_footer endRefreshing];
+    }];
     
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return 0;
+    self.tableView.mj_footer.hidden = (self.giftShopArray.count == 0);
+    return self.giftShopArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    GSGiftShopCell *cell = [tableView dequeueReusableCellWithIdentifier:giftShopID];
+    cell.giftShop = self.giftShopArray[indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     return cell;
 }
-*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 200;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    GSStrategyController *strategy = [[GSStrategyController alloc] init];
+    
+    GSGiftShop *gift = self.giftShopArray[indexPath.row];
+    strategy.urlString = gift.content_url;
+    strategy.cover_webp_url = gift.cover_webp_url;
+    strategy.title = gift.title;
+    [strategy setHidesBottomBarWhenPushed:YES];
+    
+    [self.navigationController pushViewController:strategy animated:YES];
+    
+}
 
 @end
