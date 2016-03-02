@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GSHotView.h"
 
 @interface GSHotController : UIViewController
+
+@property (nonatomic, strong) GSHotView *hv;
 
 @end

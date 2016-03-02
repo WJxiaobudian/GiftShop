@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37420C6B1C8520B4002CE740 /* GSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C6A1C8520B4002CE740 /* GSTitleLabel.m */; };
-		37420C6E1C8523AA002CE740 /* GSHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C6D1C8523AA002CE740 /* GSHotModel.m */; };
-		37420C721C8523D3002CE740 /* GSHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C701C8523D3002CE740 /* GSHotCell.m */; };
-		37420C731C8523D3002CE740 /* GSHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37420C711C8523D3002CE740 /* GSHotCell.xib */; };
 		37420C7C1C852409002CE740 /* GSMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7B1C852409002CE740 /* GSMine.m */; };
 		37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7E1C853219002CE740 /* GSGiftShopViewController.m */; };
 		37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C811C857027002CE740 /* GSGiftShopCell.m */; };
@@ -89,7 +86,6 @@
 		37FB26851C8466BA0003F3D3 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26801C8466BA0003F3D3 /* SVProgressHUD.m */; };
 		37FB26861C8466BA0003F3D3 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26821C8466BA0003F3D3 /* SVRadialGradientLayer.m */; };
 		37FB268B1C8467BC0003F3D3 /* GSNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB268A1C8467BC0003F3D3 /* GSNavViewController.m */; };
-		37FB26911C8467ED0003F3D3 /* GSHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26901C8467ED0003F3D3 /* GSHotController.m */; };
 		37FB26971C8468040003F3D3 /* GSMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26961C8468040003F3D3 /* GSMineController.m */; };
 		37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26991C84684D0003F3D3 /* UIView+GSExtenssion.m */; };
 		37FB26A01C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB269F1C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m */; };
@@ -111,16 +107,18 @@
 		834143961C86701400EAB4C9 /* GSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 834143881C86701400EAB4C9 /* GSCategory.m */; };
 		834143971C86701400EAB4C9 /* GSFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */; };
 		834143981C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341438B1C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png */; };
+		C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6821C8674280070384C /* GSDetailViewController.m */; };
+		C2AAC68F1C8674280070384C /* GSHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6841C8674280070384C /* GSHotController.m */; };
+		C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6861C8674280070384C /* GT_NetTools.m */; };
+		C2AAC6911C8674280070384C /* GSHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6891C8674280070384C /* GSHotModel.m */; };
+		C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6951C8674CC0070384C /* GSHotView.m */; };
+		C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6981C8677610070384C /* GSHotCell.m */; };
+		C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AAC6991C8677610070384C /* GSHotCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37420C691C8520B4002CE740 /* GSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTitleLabel.h; sourceTree = "<group>"; };
 		37420C6A1C8520B4002CE740 /* GSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTitleLabel.m; sourceTree = "<group>"; };
-		37420C6C1C8523AA002CE740 /* GSHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotModel.h; sourceTree = "<group>"; };
-		37420C6D1C8523AA002CE740 /* GSHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotModel.m; sourceTree = "<group>"; };
-		37420C6F1C8523D3002CE740 /* GSHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotCell.h; sourceTree = "<group>"; };
-		37420C701C8523D3002CE740 /* GSHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotCell.m; sourceTree = "<group>"; };
-		37420C711C8523D3002CE740 /* GSHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHotCell.xib; sourceTree = "<group>"; };
 		37420C7A1C852409002CE740 /* GSMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMine.h; sourceTree = "<group>"; };
 		37420C7B1C852409002CE740 /* GSMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMine.m; sourceTree = "<group>"; };
 		37420C7D1C853219002CE740 /* GSGiftShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopViewController.h; sourceTree = "<group>"; };
@@ -276,11 +274,8 @@
 		37FB26801C8466BA0003F3D3 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		37FB26811C8466BA0003F3D3 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
 		37FB26821C8466BA0003F3D3 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
-		37FB26871C8466F60003F3D3 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		37FB26891C8467BC0003F3D3 /* GSNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSNavViewController.h; sourceTree = "<group>"; };
 		37FB268A1C8467BC0003F3D3 /* GSNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSNavViewController.m; sourceTree = "<group>"; };
-		37FB268F1C8467ED0003F3D3 /* GSHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotController.h; sourceTree = "<group>"; };
-		37FB26901C8467ED0003F3D3 /* GSHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotController.m; sourceTree = "<group>"; };
 		37FB26951C8468040003F3D3 /* GSMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMineController.h; sourceTree = "<group>"; };
 		37FB26961C8468040003F3D3 /* GSMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMineController.m; sourceTree = "<group>"; };
 		37FB26981C84684D0003F3D3 /* UIView+GSExtenssion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GSExtenssion.h"; sourceTree = "<group>"; };
@@ -317,6 +312,20 @@
 		834143891C86701400EAB4C9 /* GSFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirstCollectionViewCell.h; sourceTree = "<group>"; };
 		8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirstCollectionViewCell.m; sourceTree = "<group>"; };
 		8341438B1C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2016-03-01 下午9.44.50.png"; sourceTree = "<group>"; };
+		C2AAC67E1C8673630070384C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C2AAC6811C8674280070384C /* GSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDetailViewController.h; sourceTree = "<group>"; };
+		C2AAC6821C8674280070384C /* GSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDetailViewController.m; sourceTree = "<group>"; };
+		C2AAC6831C8674280070384C /* GSHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotController.h; sourceTree = "<group>"; };
+		C2AAC6841C8674280070384C /* GSHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotController.m; sourceTree = "<group>"; };
+		C2AAC6851C8674280070384C /* GT_NetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT_NetTools.h; sourceTree = "<group>"; };
+		C2AAC6861C8674280070384C /* GT_NetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GT_NetTools.m; sourceTree = "<group>"; };
+		C2AAC6881C8674280070384C /* GSHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotModel.h; sourceTree = "<group>"; };
+		C2AAC6891C8674280070384C /* GSHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotModel.m; sourceTree = "<group>"; };
+		C2AAC6941C8674CC0070384C /* GSHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotView.h; sourceTree = "<group>"; };
+		C2AAC6951C8674CC0070384C /* GSHotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotView.m; sourceTree = "<group>"; };
+		C2AAC6971C8677610070384C /* GSHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotCell.h; sourceTree = "<group>"; };
+		C2AAC6981C8677610070384C /* GSHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotCell.m; sourceTree = "<group>"; };
+		C2AAC6991C8677610070384C /* GSHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHotCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -386,9 +395,9 @@
 				37FB25881C8465960003F3D3 /* Main.storyboard */,
 				37FB258D1C8465960003F3D3 /* LaunchScreen.storyboard */,
 				37FB26A61C847C8F0003F3D3 /* Assets.xcassets */,
+				C2AAC67E1C8673630070384C /* PrefixHeader.pch */,
 				37FB25901C8465960003F3D3 /* Info.plist */,
 				37FB26B01C8489540003F3D3 /* GiftShop.plist */,
-				37FB26871C8466F60003F3D3 /* PrefixHeader.pch */,
 				37FB257F1C8465960003F3D3 /* Supporting Files */,
 			);
 			path = GiftShop;
@@ -404,11 +413,11 @@
 		37FB25961C84663A0003F3D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2AAC67F1C8674280070384C /* Hot(热门) */,
 				834143721C86701400EAB4C9 /* Category(分类) */,
 				37420C8A1C859263002CE740 /* Strategy(攻略详情) */,
 				37FB26AB1C8487170003F3D3 /* Search(搜索) */,
 				37FB259B1C84663A0003F3D3 /* GiftShop(礼品) */,
-				37FB259F1C84663A0003F3D3 /* Hot(热门) */,
 				37FB25A31C84663A0003F3D3 /* Mine(我的) */,
 				37FB26881C8467680003F3D3 /* Main(主要) */,
 				37FB25A71C84663A0003F3D3 /* Other(其他) */,
@@ -454,44 +463,6 @@
 				37420C801C857027002CE740 /* GSGiftShopCell.h */,
 				37420C811C857027002CE740 /* GSGiftShopCell.m */,
 				37420C821C857027002CE740 /* GSGiftShopCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		37FB259F1C84663A0003F3D3 /* Hot(热门) */ = {
-			isa = PBXGroup;
-			children = (
-				37FB25A01C84663A0003F3D3 /* Controller */,
-				37FB25A11C84663A0003F3D3 /* Model */,
-				37FB25A21C84663A0003F3D3 /* View */,
-			);
-			path = "Hot(热门)";
-			sourceTree = "<group>";
-		};
-		37FB25A01C84663A0003F3D3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				37FB268F1C8467ED0003F3D3 /* GSHotController.h */,
-				37FB26901C8467ED0003F3D3 /* GSHotController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		37FB25A11C84663A0003F3D3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				37420C6C1C8523AA002CE740 /* GSHotModel.h */,
-				37420C6D1C8523AA002CE740 /* GSHotModel.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		37FB25A21C84663A0003F3D3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				37420C6F1C8523D3002CE740 /* GSHotCell.h */,
-				37420C701C8523D3002CE740 /* GSHotCell.m */,
-				37420C711C8523D3002CE740 /* GSHotCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -884,6 +855,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C2AAC67F1C8674280070384C /* Hot(热门) */ = {
+			isa = PBXGroup;
+			children = (
+				C2AAC6801C8674280070384C /* Controller */,
+				C2AAC6871C8674280070384C /* Model */,
+				C2AAC68A1C8674280070384C /* View */,
+			);
+			path = "Hot(热门)";
+			sourceTree = "<group>";
+		};
+		C2AAC6801C8674280070384C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2AAC6811C8674280070384C /* GSDetailViewController.h */,
+				C2AAC6821C8674280070384C /* GSDetailViewController.m */,
+				C2AAC6831C8674280070384C /* GSHotController.h */,
+				C2AAC6841C8674280070384C /* GSHotController.m */,
+				C2AAC6851C8674280070384C /* GT_NetTools.h */,
+				C2AAC6861C8674280070384C /* GT_NetTools.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2AAC6871C8674280070384C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C2AAC6881C8674280070384C /* GSHotModel.h */,
+				C2AAC6891C8674280070384C /* GSHotModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2AAC68A1C8674280070384C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2AAC6941C8674CC0070384C /* GSHotView.h */,
+				C2AAC6951C8674CC0070384C /* GSHotView.m */,
+				C2AAC6971C8677610070384C /* GSHotCell.h */,
+				C2AAC6981C8677610070384C /* GSHotCell.m */,
+				C2AAC6991C8677610070384C /* GSHotCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -946,9 +961,9 @@
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
 				37420C841C857027002CE740 /* GSGiftShopCell.xib in Resources */,
 				834143981C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png in Resources */,
+				C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */,
 				834143911C86701400EAB4C9 /* PresentViewController.xib in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
-				37420C731C8523D3002CE740 /* GSHotCell.xib in Resources */,
 				37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */,
 				37FB26431C8466A50003F3D3 /* MJRefresh.bundle in Resources */,
 				8341438C1C86701400EAB4C9 /* 1.jpg in Resources */,
@@ -975,14 +990,15 @@
 				37FB26361C8466A50003F3D3 /* MJRefreshBackFooter.m in Sources */,
 				37FB25E21C8466880003F3D3 /* UIAlertView+AFNetworking.m in Sources */,
 				37FB25C91C84667D0003F3D3 /* AFSecurityPolicy.m in Sources */,
+				C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */,
 				37FB26761C8466AF0003F3D3 /* UIImage+WebP.m in Sources */,
 				37FB268B1C8467BC0003F3D3 /* GSNavViewController.m in Sources */,
 				37FB263B1C8466A50003F3D3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				37FB25C51C84667D0003F3D3 /* AFHTTPRequestOperation.m in Sources */,
+				C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */,
 				834143951C86701400EAB4C9 /* GSFirrstModel.m in Sources */,
 				37FB25CD1C84667D0003F3D3 /* AFURLSessionManager.m in Sources */,
 				37FB26471C8466A50003F3D3 /* UIView+MJExtension.m in Sources */,
-				37420C6E1C8523AA002CE740 /* GSHotModel.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
 				37FB26441C8466A50003F3D3 /* MJRefreshConst.m in Sources */,
 				37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */,
@@ -994,6 +1010,7 @@
 				37FB263C1C8466A50003F3D3 /* MJRefreshAutoStateFooter.m in Sources */,
 				37FB25CC1C84667D0003F3D3 /* AFURLResponseSerialization.m in Sources */,
 				37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */,
+				C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */,
 				37FB26371C8466A50003F3D3 /* MJRefreshComponent.m in Sources */,
 				37FB263D1C8466A50003F3D3 /* MJRefreshBackGifFooter.m in Sources */,
 				37FB26A01C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m in Sources */,
@@ -1003,11 +1020,13 @@
 				37FB266A1C8466AF0003F3D3 /* MKAnnotationView+WebCache.m in Sources */,
 				37FB26391C8466A50003F3D3 /* MJRefreshHeader.m in Sources */,
 				37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */,
+				C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */,
 				37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
 				37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */,
 				37FB26461C8466A50003F3D3 /* UIScrollView+MJRefresh.m in Sources */,
+				C2AAC68F1C8674280070384C /* GSHotController.m in Sources */,
 				834143931C86701400EAB4C9 /* GSCategoryManager.m in Sources */,
 				8341438D1C86701400EAB4C9 /* GSCategoryController.m in Sources */,
 				834143921C86701400EAB4C9 /* CQ_NetTools.m in Sources */,
@@ -1022,6 +1041,7 @@
 				37420C891C857879002CE740 /* GSGiftShop.m in Sources */,
 				37FB266D1C8466AF0003F3D3 /* SDWebImageCompat.m in Sources */,
 				37FB25E41C8466880003F3D3 /* UIImageView+AFNetworking.m in Sources */,
+				C2AAC6911C8674280070384C /* GSHotModel.m in Sources */,
 				37FB26071C84669C0003F3D3 /* NSString+MJExtension.m in Sources */,
 				37FB26411C8466A50003F3D3 /* MJRefreshNormalHeader.m in Sources */,
 				37FB26421C8466A50003F3D3 /* MJRefreshStateHeader.m in Sources */,
@@ -1040,7 +1060,6 @@
 				37FB26381C8466A50003F3D3 /* MJRefreshFooter.m in Sources */,
 				37FB26701C8466AF0003F3D3 /* SDWebImageDownloaderOperation.m in Sources */,
 				37FB25E71C8466880003F3D3 /* UIWebView+AFNetworking.m in Sources */,
-				37420C721C8523D3002CE740 /* GSHotCell.m in Sources */,
 				37FB26751C8466AF0003F3D3 /* UIImage+MultiFormat.m in Sources */,
 				37FB26791C8466AF0003F3D3 /* UIView+WebCacheOperation.m in Sources */,
 				37420C861C857843002CE740 /* Foundation+Log.m in Sources */,
@@ -1053,7 +1072,6 @@
 				37FB25E11C8466880003F3D3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				37FB26031C84669C0003F3D3 /* NSObject+MJClass.m in Sources */,
 				37FB26001C84669C0003F3D3 /* MJProperty.m in Sources */,
-				37FB26911C8467ED0003F3D3 /* GSHotController.m in Sources */,
 				37FB266C1C8466AF0003F3D3 /* SDImageCache.m in Sources */,
 				834143901C86701400EAB4C9 /* PresentViewController.m in Sources */,
 				8341438E1C86701400EAB4C9 /* GSStrategyViewController.m in Sources */,
@@ -1168,8 +1186,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/coder_xue/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/lanou3g/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1184,8 +1202,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = NO;
-				GCC_PREFIX_HEADER = /Users/coder_xue/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = /Users/lanou3g/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
