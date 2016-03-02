@@ -17,9 +17,9 @@
     
     giftShop.title = dict[@"title"];
     
-    giftShop.likes_count = dict[@""];
+    giftShop.likes_count = [dict[@"likes_count"] integerValue];
     
-    giftShop.cover_image_url = dict[@"cover_image_url"];
+    giftShop.cover_image_url = dict[@"cover_image_url"] ;
     
     giftShop.url = dict[@"url"];
     

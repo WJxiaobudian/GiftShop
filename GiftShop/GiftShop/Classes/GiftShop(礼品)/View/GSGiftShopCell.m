@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *likesCount;
 
+
 @property (weak, nonatomic) IBOutlet UIImageView *contentUrl;
 
 @end
@@ -30,7 +31,7 @@
     _giftShop = giftShop;
     
     self.titleLabel.text = giftShop.title;
-    self.likesCount.text = giftShop.likes_count;
+    self.likesCount.text = [NSString stringWithFormat:@"%ld",giftShop.likes_count];
     [self.contentUrl sd_setImageWithURL:[NSURL URLWithString:giftShop.cover_image_url] placeholderImage:nil];
 }
 
@@ -41,6 +42,7 @@
     frame.size.width -= 2 * margin;
     frame.size.height -= margin;
     frame.origin.y += 10;
+
     
     [super setFrame:frame];
 }

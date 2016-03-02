@@ -59,7 +59,7 @@
     UIScrollView * smallScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScrollerWidth)];
     
     /* 小的菜单栏的颜色 */
-    //    smallScrollView.backgroundColor = [UIColor grayColor];
+        smallScrollView.backgroundColor = [UIColor colorWithRed:1.000 green:0.500 blue:0.000 alpha:0.489];
     
     /* 把滚动视图添加到View上 */
     [self.view addSubview:smallScrollView];

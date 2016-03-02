@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37420C6B1C8520B4002CE740 /* GSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C6A1C8520B4002CE740 /* GSTitleLabel.m */; };
 		37420C7C1C852409002CE740 /* GSMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7B1C852409002CE740 /* GSMine.m */; };
-		37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7E1C853219002CE740 /* GSGiftShopViewController.m */; };
-		37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C811C857027002CE740 /* GSGiftShopCell.m */; };
-		37420C841C857027002CE740 /* GSGiftShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37420C821C857027002CE740 /* GSGiftShopCell.xib */; };
 		37420C861C857843002CE740 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C851C857843002CE740 /* Foundation+Log.m */; };
-		37420C891C857879002CE740 /* GSGiftShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C881C857879002CE740 /* GSGiftShop.m */; };
-		37420C911C8592E6002CE740 /* GSStrategyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C901C8592E6002CE740 /* GSStrategyController.m */; };
+		37D8A1B51C872ACE0059A875 /* GSStrategyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1B41C872ACE0059A875 /* GSStrategyController.m */; };
+		37D8A1D41C872ADD0059A875 /* GSGiftShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1B91C872ADD0059A875 /* GSGiftShopController.m */; };
+		37D8A1D51C872ADD0059A875 /* GSGiftShopScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1BB1C872ADD0059A875 /* GSGiftShopScrollController.m */; };
+		37D8A1D61C872ADD0059A875 /* GSGiftShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1BD1C872ADD0059A875 /* GSGiftShopViewController.m */; };
+		37D8A1D71C872ADD0059A875 /* GSTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1BF1C872ADD0059A875 /* GSTextField.m */; };
+		37D8A1D81C872ADD0059A875 /* GSVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1C11C872ADD0059A875 /* GSVerticalButton.m */; };
+		37D8A1D91C872ADD0059A875 /* GSFirstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1C41C872ADD0059A875 /* GSFirstModel.m */; };
+		37D8A1DA1C872ADD0059A875 /* GSGiftShop.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1C61C872ADD0059A875 /* GSGiftShop.m */; };
+		37D8A1DB1C872ADD0059A875 /* GSScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1C81C872ADD0059A875 /* GSScroll.m */; };
+		37D8A1DC1C872ADD0059A875 /* GSFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1CB1C872ADD0059A875 /* GSFirst.m */; };
+		37D8A1DD1C872ADD0059A875 /* GSFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D8A1CC1C872ADD0059A875 /* GSFirst.xib */; };
+		37D8A1DE1C872ADD0059A875 /* GSFirstCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1CE1C872ADD0059A875 /* GSFirstCell.m */; };
+		37D8A1DF1C872ADD0059A875 /* GSGiftShopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1D01C872ADD0059A875 /* GSGiftShopCell.m */; };
+		37D8A1E01C872ADD0059A875 /* GSGiftShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D8A1D11C872ADD0059A875 /* GSGiftShopCell.xib */; };
+		37D8A1E11C872ADD0059A875 /* GSTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1D31C872ADD0059A875 /* GSTitleLabel.m */; };
+		37D8A1F21C872B040059A875 /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1E51C872B040059A875 /* TAAbstractDotView.m */; };
+		37D8A1F31C872B040059A875 /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1E71C872B040059A875 /* TAAnimatedDotView.m */; };
+		37D8A1F41C872B040059A875 /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1E91C872B040059A875 /* TADotView.m */; };
+		37D8A1F51C872B040059A875 /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1EB1C872B040059A875 /* TAPageControl.m */; };
+		37D8A1F61C872B040059A875 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1ED1C872B040059A875 /* SDCollectionViewCell.m */; };
+		37D8A1F71C872B040059A875 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1EF1C872B040059A875 /* SDCycleScrollView.m */; };
+		37D8A1F81C872B040059A875 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1F11C872B040059A875 /* UIView+SDExtension.m */; };
 		37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB25881C8465960003F3D3 /* Main.storyboard */; };
 		37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB258D1C8465960003F3D3 /* LaunchScreen.storyboard */; };
 		37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25AA1C84663A0003F3D3 /* AppDelegate.m */; };
@@ -91,7 +107,6 @@
 		37FB26A01C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB269F1C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m */; };
 		37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26A21C8470120003F3D3 /* GSTabBarController.m */; };
 		37FB26A71C847C8F0003F3D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37FB26A61C847C8F0003F3D3 /* Assets.xcassets */; };
-		37FB26AA1C8482730003F3D3 /* GSGiftShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26A91C8482730003F3D3 /* GSGiftShopController.m */; };
 		37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB26AE1C8487570003F3D3 /* GSSearchController.m */; };
 		37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FB26B01C8489540003F3D3 /* GiftShop.plist */; };
 		8341438C1C86701400EAB4C9 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 834143741C86701400EAB4C9 /* 1.jpg */; };
@@ -123,20 +138,51 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37420C691C8520B4002CE740 /* GSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTitleLabel.h; sourceTree = "<group>"; };
-		37420C6A1C8520B4002CE740 /* GSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTitleLabel.m; sourceTree = "<group>"; };
 		37420C7A1C852409002CE740 /* GSMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMine.h; sourceTree = "<group>"; };
 		37420C7B1C852409002CE740 /* GSMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMine.m; sourceTree = "<group>"; };
-		37420C7D1C853219002CE740 /* GSGiftShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopViewController.h; sourceTree = "<group>"; };
-		37420C7E1C853219002CE740 /* GSGiftShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopViewController.m; sourceTree = "<group>"; };
-		37420C801C857027002CE740 /* GSGiftShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopCell.h; sourceTree = "<group>"; };
-		37420C811C857027002CE740 /* GSGiftShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopCell.m; sourceTree = "<group>"; };
-		37420C821C857027002CE740 /* GSGiftShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSGiftShopCell.xib; sourceTree = "<group>"; };
 		37420C851C857843002CE740 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
-		37420C871C857879002CE740 /* GSGiftShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShop.h; sourceTree = "<group>"; };
-		37420C881C857879002CE740 /* GSGiftShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShop.m; sourceTree = "<group>"; };
-		37420C8F1C8592E6002CE740 /* GSStrategyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStrategyController.h; sourceTree = "<group>"; };
-		37420C901C8592E6002CE740 /* GSStrategyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStrategyController.m; sourceTree = "<group>"; };
+		37D8A1B31C872ACE0059A875 /* GSStrategyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStrategyController.h; sourceTree = "<group>"; };
+		37D8A1B41C872ACE0059A875 /* GSStrategyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStrategyController.m; sourceTree = "<group>"; };
+		37D8A1B81C872ADD0059A875 /* GSGiftShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopController.h; sourceTree = "<group>"; };
+		37D8A1B91C872ADD0059A875 /* GSGiftShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopController.m; sourceTree = "<group>"; };
+		37D8A1BA1C872ADD0059A875 /* GSGiftShopScrollController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopScrollController.h; sourceTree = "<group>"; };
+		37D8A1BB1C872ADD0059A875 /* GSGiftShopScrollController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopScrollController.m; sourceTree = "<group>"; };
+		37D8A1BC1C872ADD0059A875 /* GSGiftShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopViewController.h; sourceTree = "<group>"; };
+		37D8A1BD1C872ADD0059A875 /* GSGiftShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopViewController.m; sourceTree = "<group>"; };
+		37D8A1BE1C872ADD0059A875 /* GSTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTextField.h; sourceTree = "<group>"; };
+		37D8A1BF1C872ADD0059A875 /* GSTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTextField.m; sourceTree = "<group>"; };
+		37D8A1C01C872ADD0059A875 /* GSVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSVerticalButton.h; sourceTree = "<group>"; };
+		37D8A1C11C872ADD0059A875 /* GSVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSVerticalButton.m; sourceTree = "<group>"; };
+		37D8A1C31C872ADD0059A875 /* GSFirstModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirstModel.h; sourceTree = "<group>"; };
+		37D8A1C41C872ADD0059A875 /* GSFirstModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirstModel.m; sourceTree = "<group>"; };
+		37D8A1C51C872ADD0059A875 /* GSGiftShop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShop.h; sourceTree = "<group>"; };
+		37D8A1C61C872ADD0059A875 /* GSGiftShop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShop.m; sourceTree = "<group>"; };
+		37D8A1C71C872ADD0059A875 /* GSScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSScroll.h; sourceTree = "<group>"; };
+		37D8A1C81C872ADD0059A875 /* GSScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSScroll.m; sourceTree = "<group>"; };
+		37D8A1CA1C872ADD0059A875 /* GSFirst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirst.h; sourceTree = "<group>"; };
+		37D8A1CB1C872ADD0059A875 /* GSFirst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirst.m; sourceTree = "<group>"; };
+		37D8A1CC1C872ADD0059A875 /* GSFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSFirst.xib; sourceTree = "<group>"; };
+		37D8A1CD1C872ADD0059A875 /* GSFirstCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirstCell.h; sourceTree = "<group>"; };
+		37D8A1CE1C872ADD0059A875 /* GSFirstCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirstCell.m; sourceTree = "<group>"; };
+		37D8A1CF1C872ADD0059A875 /* GSGiftShopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopCell.h; sourceTree = "<group>"; };
+		37D8A1D01C872ADD0059A875 /* GSGiftShopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopCell.m; sourceTree = "<group>"; };
+		37D8A1D11C872ADD0059A875 /* GSGiftShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSGiftShopCell.xib; sourceTree = "<group>"; };
+		37D8A1D21C872ADD0059A875 /* GSTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTitleLabel.h; sourceTree = "<group>"; };
+		37D8A1D31C872ADD0059A875 /* GSTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTitleLabel.m; sourceTree = "<group>"; };
+		37D8A1E41C872B040059A875 /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		37D8A1E51C872B040059A875 /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		37D8A1E61C872B040059A875 /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		37D8A1E71C872B040059A875 /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		37D8A1E81C872B040059A875 /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		37D8A1E91C872B040059A875 /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		37D8A1EA1C872B040059A875 /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		37D8A1EB1C872B040059A875 /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		37D8A1EC1C872B040059A875 /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		37D8A1ED1C872B040059A875 /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		37D8A1EE1C872B040059A875 /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		37D8A1EF1C872B040059A875 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		37D8A1F01C872B040059A875 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		37D8A1F11C872B040059A875 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		37FB257C1C8465960003F3D3 /* GiftShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB25891C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37FB258E1C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -291,8 +337,6 @@
 		37FB26A11C8470120003F3D3 /* GSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTabBarController.h; sourceTree = "<group>"; };
 		37FB26A21C8470120003F3D3 /* GSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTabBarController.m; sourceTree = "<group>"; };
 		37FB26A61C847C8F0003F3D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		37FB26A81C8482730003F3D3 /* GSGiftShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopController.h; sourceTree = "<group>"; };
-		37FB26A91C8482730003F3D3 /* GSGiftShopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftShopController.m; sourceTree = "<group>"; };
 		37FB26AD1C8487570003F3D3 /* GSSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSearchController.h; sourceTree = "<group>"; };
 		37FB26AE1C8487570003F3D3 /* GSSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSearchController.m; sourceTree = "<group>"; };
 		37FB26B01C8489540003F3D3 /* GiftShop.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GiftShop.plist; sourceTree = "<group>"; };
@@ -355,37 +399,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37420C8A1C859263002CE740 /* Strategy(攻略详情) */ = {
+		37D8A1B11C872ACE0059A875 /* Strategy(攻略详情) */ = {
 			isa = PBXGroup;
 			children = (
-				37420C931C859951002CE740 /* View */,
-				37420C921C859949002CE740 /* Model  */,
-				37420C8B1C859263002CE740 /* Controller */,
+				37D8A1B21C872ACE0059A875 /* Controller */,
 			);
 			path = "Strategy(攻略详情)";
 			sourceTree = "<group>";
 		};
-		37420C8B1C859263002CE740 /* Controller */ = {
+		37D8A1B21C872ACE0059A875 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				37420C8F1C8592E6002CE740 /* GSStrategyController.h */,
-				37420C901C8592E6002CE740 /* GSStrategyController.m */,
+				37D8A1B31C872ACE0059A875 /* GSStrategyController.h */,
+				37D8A1B41C872ACE0059A875 /* GSStrategyController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		37420C921C859949002CE740 /* Model  */ = {
+		37D8A1B61C872ADD0059A875 /* GiftShop(礼品) */ = {
 			isa = PBXGroup;
 			children = (
+				37D8A1B71C872ADD0059A875 /* Controller */,
+				37D8A1BE1C872ADD0059A875 /* GSTextField.h */,
+				37D8A1BF1C872ADD0059A875 /* GSTextField.m */,
+				37D8A1C01C872ADD0059A875 /* GSVerticalButton.h */,
+				37D8A1C11C872ADD0059A875 /* GSVerticalButton.m */,
+				37D8A1C21C872ADD0059A875 /* Model */,
+				37D8A1C91C872ADD0059A875 /* View */,
 			);
-			path = "Model ";
+			path = "GiftShop(礼品)";
 			sourceTree = "<group>";
 		};
-		37420C931C859951002CE740 /* View */ = {
+		37D8A1B71C872ADD0059A875 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				37D8A1B81C872ADD0059A875 /* GSGiftShopController.h */,
+				37D8A1B91C872ADD0059A875 /* GSGiftShopController.m */,
+				37D8A1BA1C872ADD0059A875 /* GSGiftShopScrollController.h */,
+				37D8A1BB1C872ADD0059A875 /* GSGiftShopScrollController.m */,
+				37D8A1BC1C872ADD0059A875 /* GSGiftShopViewController.h */,
+				37D8A1BD1C872ADD0059A875 /* GSGiftShopViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37D8A1C21C872ADD0059A875 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37D8A1C31C872ADD0059A875 /* GSFirstModel.h */,
+				37D8A1C41C872ADD0059A875 /* GSFirstModel.m */,
+				37D8A1C51C872ADD0059A875 /* GSGiftShop.h */,
+				37D8A1C61C872ADD0059A875 /* GSGiftShop.m */,
+				37D8A1C71C872ADD0059A875 /* GSScroll.h */,
+				37D8A1C81C872ADD0059A875 /* GSScroll.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37D8A1C91C872ADD0059A875 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37D8A1CA1C872ADD0059A875 /* GSFirst.h */,
+				37D8A1CB1C872ADD0059A875 /* GSFirst.m */,
+				37D8A1CC1C872ADD0059A875 /* GSFirst.xib */,
+				37D8A1CD1C872ADD0059A875 /* GSFirstCell.h */,
+				37D8A1CE1C872ADD0059A875 /* GSFirstCell.m */,
+				37D8A1CF1C872ADD0059A875 /* GSGiftShopCell.h */,
+				37D8A1D01C872ADD0059A875 /* GSGiftShopCell.m */,
+				37D8A1D11C872ADD0059A875 /* GSGiftShopCell.xib */,
+				37D8A1D21C872ADD0059A875 /* GSTitleLabel.h */,
+				37D8A1D31C872ADD0059A875 /* GSTitleLabel.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		37D8A1E21C872B040059A875 /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				37D8A1E31C872B040059A875 /* PageControl */,
+				37D8A1EC1C872B040059A875 /* SDCollectionViewCell.h */,
+				37D8A1ED1C872B040059A875 /* SDCollectionViewCell.m */,
+				37D8A1EE1C872B040059A875 /* SDCycleScrollView.h */,
+				37D8A1EF1C872B040059A875 /* SDCycleScrollView.m */,
+				37D8A1F01C872B040059A875 /* UIView+SDExtension.h */,
+				37D8A1F11C872B040059A875 /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		37D8A1E31C872B040059A875 /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				37D8A1E41C872B040059A875 /* TAAbstractDotView.h */,
+				37D8A1E51C872B040059A875 /* TAAbstractDotView.m */,
+				37D8A1E61C872B040059A875 /* TAAnimatedDotView.h */,
+				37D8A1E71C872B040059A875 /* TAAnimatedDotView.m */,
+				37D8A1E81C872B040059A875 /* TADotView.h */,
+				37D8A1E91C872B040059A875 /* TADotView.m */,
+				37D8A1EA1C872B040059A875 /* TAPageControl.h */,
+				37D8A1EB1C872B040059A875 /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		37FB25731C8465960003F3D3 = {
@@ -429,58 +543,16 @@
 		37FB25961C84663A0003F3D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				37D8A1B61C872ADD0059A875 /* GiftShop(礼品) */,
+				37D8A1B11C872ACE0059A875 /* Strategy(攻略详情) */,
 				C2AAC67F1C8674280070384C /* Hot(热门) */,
 				834143721C86701400EAB4C9 /* Category(分类) */,
-				37420C8A1C859263002CE740 /* Strategy(攻略详情) */,
 				37FB26AB1C8487170003F3D3 /* Search(搜索) */,
-				37FB259B1C84663A0003F3D3 /* GiftShop(礼品) */,
 				37FB25A31C84663A0003F3D3 /* Mine(我的) */,
 				37FB26881C8467680003F3D3 /* Main(主要) */,
 				37FB25A71C84663A0003F3D3 /* Other(其他) */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		37FB259B1C84663A0003F3D3 /* GiftShop(礼品) */ = {
-			isa = PBXGroup;
-			children = (
-				37FB259C1C84663A0003F3D3 /* Controller */,
-				37FB259D1C84663A0003F3D3 /* Model */,
-				37FB259E1C84663A0003F3D3 /* View */,
-			);
-			path = "GiftShop(礼品)";
-			sourceTree = "<group>";
-		};
-		37FB259C1C84663A0003F3D3 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				37FB26A81C8482730003F3D3 /* GSGiftShopController.h */,
-				37FB26A91C8482730003F3D3 /* GSGiftShopController.m */,
-				37420C7D1C853219002CE740 /* GSGiftShopViewController.h */,
-				37420C7E1C853219002CE740 /* GSGiftShopViewController.m */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		37FB259D1C84663A0003F3D3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				37420C871C857879002CE740 /* GSGiftShop.h */,
-				37420C881C857879002CE740 /* GSGiftShop.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		37FB259E1C84663A0003F3D3 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				37420C691C8520B4002CE740 /* GSTitleLabel.h */,
-				37420C6A1C8520B4002CE740 /* GSTitleLabel.m */,
-				37420C801C857027002CE740 /* GSGiftShopCell.h */,
-				37420C811C857027002CE740 /* GSGiftShopCell.m */,
-				37420C821C857027002CE740 /* GSGiftShopCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		37FB25A31C84663A0003F3D3 /* Mine(我的) */ = {
@@ -552,6 +624,7 @@
 		37FB25AD1C84663A0003F3D3 /* Lib(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				37D8A1E21C872B040059A875 /* SDCycleScrollView */,
 				C2AAC69C1C86D6AB0070384C /* FCXRefreshView */,
 				37420C851C857843002CE740 /* Foundation+Log.m */,
 				37FB26481C8466AF0003F3D3 /* SDWebImage */,
@@ -992,14 +1065,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D8A1DD1C872ADD0059A875 /* GSFirst.xib in Resources */,
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
-				37420C841C857027002CE740 /* GSGiftShopCell.xib in Resources */,
 				834143981C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png in Resources */,
 				C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */,
 				834143911C86701400EAB4C9 /* PresentViewController.xib in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
 				37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */,
 				37FB26431C8466A50003F3D3 /* MJRefresh.bundle in Resources */,
+				37D8A1E01C872ADD0059A875 /* GSGiftShopCell.xib in Resources */,
 				8341438C1C86701400EAB4C9 /* 1.jpg in Resources */,
 				8341438F1C86701400EAB4C9 /* GSStrategyViewController.xib in Resources */,
 				C2AAC6A81C86D6AB0070384C /* blueArrow@2x.png in Resources */,
@@ -1022,25 +1096,30 @@
 				37FB25CB1C84667D0003F3D3 /* AFURLRequestSerialization.m in Sources */,
 				37FB26771C8466AF0003F3D3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				37FB25CA1C84667D0003F3D3 /* AFURLConnectionOperation.m in Sources */,
-				37420C6B1C8520B4002CE740 /* GSTitleLabel.m in Sources */,
+				37D8A1D81C872ADD0059A875 /* GSVerticalButton.m in Sources */,
 				37FB26361C8466A50003F3D3 /* MJRefreshBackFooter.m in Sources */,
 				37FB25E21C8466880003F3D3 /* UIAlertView+AFNetworking.m in Sources */,
+				37D8A1D51C872ADD0059A875 /* GSGiftShopScrollController.m in Sources */,
 				37FB25C91C84667D0003F3D3 /* AFSecurityPolicy.m in Sources */,
+				37D8A1F61C872B040059A875 /* SDCollectionViewCell.m in Sources */,
 				C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */,
 				37FB26761C8466AF0003F3D3 /* UIImage+WebP.m in Sources */,
 				37FB268B1C8467BC0003F3D3 /* GSNavViewController.m in Sources */,
+				37D8A1F71C872B040059A875 /* SDCycleScrollView.m in Sources */,
 				37FB263B1C8466A50003F3D3 /* MJRefreshAutoNormalFooter.m in Sources */,
 				37FB25C51C84667D0003F3D3 /* AFHTTPRequestOperation.m in Sources */,
 				C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */,
+				37D8A1F51C872B040059A875 /* TAPageControl.m in Sources */,
 				834143951C86701400EAB4C9 /* GSFirrstModel.m in Sources */,
 				C2AAC6AC1C86D6AB0070384C /* UIScrollView+FCXRefresh.m in Sources */,
 				37FB25CD1C84667D0003F3D3 /* AFURLSessionManager.m in Sources */,
+				37D8A1D71C872ADD0059A875 /* GSTextField.m in Sources */,
 				37FB26471C8466A50003F3D3 /* UIView+MJExtension.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
 				37FB26441C8466A50003F3D3 /* MJRefreshConst.m in Sources */,
-				37420C7F1C853219002CE740 /* GSGiftShopViewController.m in Sources */,
 				37FB26781C8466AF0003F3D3 /* UIImageView+WebCache.m in Sources */,
 				37FB26451C8466A50003F3D3 /* UIScrollView+MJExtension.m in Sources */,
+				37D8A1D61C872ADD0059A875 /* GSGiftShopViewController.m in Sources */,
 				37420C7C1C852409002CE740 /* GSMine.m in Sources */,
 				37FB26711C8466AF0003F3D3 /* SDWebImageManager.m in Sources */,
 				37FB266B1C8466AF0003F3D3 /* NSData+ImageContentType.m in Sources */,
@@ -1048,20 +1127,25 @@
 				37FB25CC1C84667D0003F3D3 /* AFURLResponseSerialization.m in Sources */,
 				37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */,
 				C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */,
+				37D8A1DB1C872ADD0059A875 /* GSScroll.m in Sources */,
 				37FB26371C8466A50003F3D3 /* MJRefreshComponent.m in Sources */,
 				37FB263D1C8466A50003F3D3 /* MJRefreshBackGifFooter.m in Sources */,
 				37FB26A01C846B910003F3D3 /* UIBarButtonItem+GSExtenssion.m in Sources */,
 				37FB26851C8466BA0003F3D3 /* SVProgressHUD.m in Sources */,
+				37D8A1E11C872ADD0059A875 /* GSTitleLabel.m in Sources */,
+				37D8A1D41C872ADD0059A875 /* GSGiftShopController.m in Sources */,
 				37FB26011C84669C0003F3D3 /* MJPropertyKey.m in Sources */,
 				37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */,
+				37D8A1F21C872B040059A875 /* TAAbstractDotView.m in Sources */,
+				37D8A1F31C872B040059A875 /* TAAnimatedDotView.m in Sources */,
 				37FB266A1C8466AF0003F3D3 /* MKAnnotationView+WebCache.m in Sources */,
 				37FB26391C8466A50003F3D3 /* MJRefreshHeader.m in Sources */,
 				37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */,
 				C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */,
 				37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */,
+				37D8A1DF1C872ADD0059A875 /* GSGiftShopCell.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
-				37420C831C857027002CE740 /* GSGiftShopCell.m in Sources */,
 				37FB26461C8466A50003F3D3 /* UIScrollView+MJRefresh.m in Sources */,
 				C2AAC68F1C8674280070384C /* GSHotController.m in Sources */,
 				834143931C86701400EAB4C9 /* GSCategoryManager.m in Sources */,
@@ -1069,6 +1153,7 @@
 				834143921C86701400EAB4C9 /* CQ_NetTools.m in Sources */,
 				37FB26351C8466A50003F3D3 /* MJRefreshAutoFooter.m in Sources */,
 				C2AAC6AB1C86D6AB0070384C /* FCXRefreshHeaderView.m in Sources */,
+				37D8A1F41C872B040059A875 /* TADotView.m in Sources */,
 				37FB25E51C8466880003F3D3 /* UIProgressView+AFNetworking.m in Sources */,
 				37FB25C71C84667D0003F3D3 /* AFHTTPSessionManager.m in Sources */,
 				37FB25E01C8466880003F3D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1076,7 +1161,6 @@
 				834143971C86701400EAB4C9 /* GSFirstCollectionViewCell.m in Sources */,
 				37FB25C61C84667D0003F3D3 /* AFHTTPRequestOperationManager.m in Sources */,
 				37FB26731C8466AF0003F3D3 /* UIButton+WebCache.m in Sources */,
-				37420C891C857879002CE740 /* GSGiftShop.m in Sources */,
 				37FB266D1C8466AF0003F3D3 /* SDWebImageCompat.m in Sources */,
 				37FB25E41C8466880003F3D3 /* UIImageView+AFNetworking.m in Sources */,
 				C2AAC6911C8674280070384C /* GSHotModel.m in Sources */,
@@ -1085,15 +1169,16 @@
 				37FB26421C8466A50003F3D3 /* MJRefreshStateHeader.m in Sources */,
 				37FB26401C8466A50003F3D3 /* MJRefreshGifHeader.m in Sources */,
 				37FB26861C8466BA0003F3D3 /* SVRadialGradientLayer.m in Sources */,
-				37FB26AA1C8482730003F3D3 /* GSGiftShopController.m in Sources */,
 				37FB263E1C8466A50003F3D3 /* MJRefreshBackNormalFooter.m in Sources */,
 				37FB266F1C8466AF0003F3D3 /* SDWebImageDownloader.m in Sources */,
 				834143941C86701400EAB4C9 /* GSCategoryModel.m in Sources */,
-				37420C911C8592E6002CE740 /* GSStrategyController.m in Sources */,
+				37D8A1DE1C872ADD0059A875 /* GSFirstCell.m in Sources */,
 				37FB25E31C8466880003F3D3 /* UIButton+AFNetworking.m in Sources */,
 				37FB263A1C8466A50003F3D3 /* MJRefreshAutoGifFooter.m in Sources */,
 				37FB26741C8466AF0003F3D3 /* UIImage+GIF.m in Sources */,
 				37FB25E61C8466880003F3D3 /* UIRefreshControl+AFNetworking.m in Sources */,
+				37D8A1B51C872ACE0059A875 /* GSStrategyController.m in Sources */,
+				37D8A1F81C872B040059A875 /* UIView+SDExtension.m in Sources */,
 				37FB25FF1C84669C0003F3D3 /* MJFoundation.m in Sources */,
 				37FB26381C8466A50003F3D3 /* MJRefreshFooter.m in Sources */,
 				37FB26701C8466AF0003F3D3 /* SDWebImageDownloaderOperation.m in Sources */,
@@ -1104,6 +1189,7 @@
 				C2AAC6AA1C86D6AB0070384C /* FCXRefreshFooterView.m in Sources */,
 				37FB25FE1C84669C0003F3D3 /* MJExtensionConst.m in Sources */,
 				37FB26041C84669C0003F3D3 /* NSObject+MJCoding.m in Sources */,
+				37D8A1D91C872ADD0059A875 /* GSFirstModel.m in Sources */,
 				C2AAC6A91C86D6AB0070384C /* FCXRefreshBaseView.m in Sources */,
 				37FB25C81C84667D0003F3D3 /* AFNetworkReachabilityManager.m in Sources */,
 				37FB26061C84669C0003F3D3 /* NSObject+MJProperty.m in Sources */,
@@ -1111,10 +1197,12 @@
 				37FB263F1C8466A50003F3D3 /* MJRefreshBackStateFooter.m in Sources */,
 				37FB25E11C8466880003F3D3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				37FB26031C84669C0003F3D3 /* NSObject+MJClass.m in Sources */,
+				37D8A1DC1C872ADD0059A875 /* GSFirst.m in Sources */,
 				37FB26001C84669C0003F3D3 /* MJProperty.m in Sources */,
 				37FB266C1C8466AF0003F3D3 /* SDImageCache.m in Sources */,
 				834143901C86701400EAB4C9 /* PresentViewController.m in Sources */,
 				8341438E1C86701400EAB4C9 /* GSStrategyViewController.m in Sources */,
+				37D8A1DA1C872ADD0059A875 /* GSGiftShop.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
