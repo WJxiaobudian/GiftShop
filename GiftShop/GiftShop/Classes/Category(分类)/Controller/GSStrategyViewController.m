@@ -15,6 +15,9 @@
 #import "GSFirstCollectionViewCell.h"
 #import "GSFirrstModel.h"
 #define interval 20
+
+#define IMAGEURL @"http://api.liwushuo.com/v2/collections?limit=6&offset=0"
+#define FIRSTURL @"http://api.liwushuo.com/v2/channel_groups/all"
 @interface GSStrategyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 //@property (nonatomic,strong)NSMutableArray *
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollection;
