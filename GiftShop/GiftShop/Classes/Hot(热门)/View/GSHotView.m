@@ -25,7 +25,9 @@
     // 设置内一个元素的大小
     layout.itemSize = CGSizeMake(self.frame.size.width/2 - 12, self.frame.size.width/2 + 100);
     // 设置内边距的大小
-    layout.sectionInset = UIEdgeInsetsMake(7, 7, 7, 7);
+    layout.sectionInset = UIEdgeInsetsMake(5, 7, 7, 7);
+    // 设置header
+    layout.headerReferenceSize = CGSizeMake(self.frame.size.width, 64);
     
     self.listCollectionView = [[UICollectionView alloc] initWithFrame:[UIScreen mainScreen].bounds collectionViewLayout:layout];
     [self addSubview:self.listCollectionView];

@@ -114,6 +114,12 @@
 		C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6951C8674CC0070384C /* GSHotView.m */; };
 		C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6981C8677610070384C /* GSHotCell.m */; };
 		C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AAC6991C8677610070384C /* GSHotCell.xib */; };
+		C2AAC6A71C86D6AB0070384C /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AAC69D1C86D6AB0070384C /* blueArrow.png */; };
+		C2AAC6A81C86D6AB0070384C /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2AAC69E1C86D6AB0070384C /* blueArrow@2x.png */; };
+		C2AAC6A91C86D6AB0070384C /* FCXRefreshBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A01C86D6AB0070384C /* FCXRefreshBaseView.m */; };
+		C2AAC6AA1C86D6AB0070384C /* FCXRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A21C86D6AB0070384C /* FCXRefreshFooterView.m */; };
+		C2AAC6AB1C86D6AB0070384C /* FCXRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A41C86D6AB0070384C /* FCXRefreshHeaderView.m */; };
+		C2AAC6AC1C86D6AB0070384C /* UIScrollView+FCXRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A61C86D6AB0070384C /* UIScrollView+FCXRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -326,6 +332,16 @@
 		C2AAC6971C8677610070384C /* GSHotCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotCell.h; sourceTree = "<group>"; };
 		C2AAC6981C8677610070384C /* GSHotCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotCell.m; sourceTree = "<group>"; };
 		C2AAC6991C8677610070384C /* GSHotCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHotCell.xib; sourceTree = "<group>"; };
+		C2AAC69D1C86D6AB0070384C /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		C2AAC69E1C86D6AB0070384C /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		C2AAC69F1C86D6AB0070384C /* FCXRefreshBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshBaseView.h; sourceTree = "<group>"; };
+		C2AAC6A01C86D6AB0070384C /* FCXRefreshBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshBaseView.m; sourceTree = "<group>"; };
+		C2AAC6A11C86D6AB0070384C /* FCXRefreshFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshFooterView.h; sourceTree = "<group>"; };
+		C2AAC6A21C86D6AB0070384C /* FCXRefreshFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshFooterView.m; sourceTree = "<group>"; };
+		C2AAC6A31C86D6AB0070384C /* FCXRefreshHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCXRefreshHeaderView.h; sourceTree = "<group>"; };
+		C2AAC6A41C86D6AB0070384C /* FCXRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshHeaderView.m; sourceTree = "<group>"; };
+		C2AAC6A51C86D6AB0070384C /* UIScrollView+FCXRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FCXRefresh.h"; sourceTree = "<group>"; };
+		C2AAC6A61C86D6AB0070384C /* UIScrollView+FCXRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FCXRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -536,6 +552,7 @@
 		37FB25AD1C84663A0003F3D3 /* Lib(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				C2AAC69C1C86D6AB0070384C /* FCXRefreshView */,
 				37420C851C857843002CE740 /* Foundation+Log.m */,
 				37FB26481C8466AF0003F3D3 /* SDWebImage */,
 				37FB26081C8466A50003F3D3 /* MJRefresh */,
@@ -899,6 +916,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C2AAC69C1C86D6AB0070384C /* FCXRefreshView */ = {
+			isa = PBXGroup;
+			children = (
+				C2AAC69D1C86D6AB0070384C /* blueArrow.png */,
+				C2AAC69E1C86D6AB0070384C /* blueArrow@2x.png */,
+				C2AAC69F1C86D6AB0070384C /* FCXRefreshBaseView.h */,
+				C2AAC6A01C86D6AB0070384C /* FCXRefreshBaseView.m */,
+				C2AAC6A11C86D6AB0070384C /* FCXRefreshFooterView.h */,
+				C2AAC6A21C86D6AB0070384C /* FCXRefreshFooterView.m */,
+				C2AAC6A31C86D6AB0070384C /* FCXRefreshHeaderView.h */,
+				C2AAC6A41C86D6AB0070384C /* FCXRefreshHeaderView.m */,
+				C2AAC6A51C86D6AB0070384C /* UIScrollView+FCXRefresh.h */,
+				C2AAC6A61C86D6AB0070384C /* UIScrollView+FCXRefresh.m */,
+			);
+			path = FCXRefreshView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -968,6 +1002,8 @@
 				37FB26431C8466A50003F3D3 /* MJRefresh.bundle in Resources */,
 				8341438C1C86701400EAB4C9 /* 1.jpg in Resources */,
 				8341438F1C86701400EAB4C9 /* GSStrategyViewController.xib in Resources */,
+				C2AAC6A81C86D6AB0070384C /* blueArrow@2x.png in Resources */,
+				C2AAC6A71C86D6AB0070384C /* blueArrow.png in Resources */,
 				37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */,
 				37FB26A71C847C8F0003F3D3 /* Assets.xcassets in Resources */,
 			);
@@ -997,6 +1033,7 @@
 				37FB25C51C84667D0003F3D3 /* AFHTTPRequestOperation.m in Sources */,
 				C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */,
 				834143951C86701400EAB4C9 /* GSFirrstModel.m in Sources */,
+				C2AAC6AC1C86D6AB0070384C /* UIScrollView+FCXRefresh.m in Sources */,
 				37FB25CD1C84667D0003F3D3 /* AFURLSessionManager.m in Sources */,
 				37FB26471C8466A50003F3D3 /* UIView+MJExtension.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
@@ -1031,6 +1068,7 @@
 				8341438D1C86701400EAB4C9 /* GSCategoryController.m in Sources */,
 				834143921C86701400EAB4C9 /* CQ_NetTools.m in Sources */,
 				37FB26351C8466A50003F3D3 /* MJRefreshAutoFooter.m in Sources */,
+				C2AAC6AB1C86D6AB0070384C /* FCXRefreshHeaderView.m in Sources */,
 				37FB25E51C8466880003F3D3 /* UIProgressView+AFNetworking.m in Sources */,
 				37FB25C71C84667D0003F3D3 /* AFHTTPSessionManager.m in Sources */,
 				37FB25E01C8466880003F3D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
@@ -1063,8 +1101,10 @@
 				37FB26751C8466AF0003F3D3 /* UIImage+MultiFormat.m in Sources */,
 				37FB26791C8466AF0003F3D3 /* UIView+WebCacheOperation.m in Sources */,
 				37420C861C857843002CE740 /* Foundation+Log.m in Sources */,
+				C2AAC6AA1C86D6AB0070384C /* FCXRefreshFooterView.m in Sources */,
 				37FB25FE1C84669C0003F3D3 /* MJExtensionConst.m in Sources */,
 				37FB26041C84669C0003F3D3 /* NSObject+MJCoding.m in Sources */,
+				C2AAC6A91C86D6AB0070384C /* FCXRefreshBaseView.m in Sources */,
 				37FB25C81C84667D0003F3D3 /* AFNetworkReachabilityManager.m in Sources */,
 				37FB26061C84669C0003F3D3 /* NSObject+MJProperty.m in Sources */,
 				37FB25B01C84663A0003F3D3 /* main.m in Sources */,
@@ -1187,7 +1227,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lanou3g/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1203,7 +1243,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/lanou3g/GiftShop/GiftShop/GiftShop/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = GiftShop/PrefixHeader.pch;
 				INFOPLIST_FILE = GiftShop/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

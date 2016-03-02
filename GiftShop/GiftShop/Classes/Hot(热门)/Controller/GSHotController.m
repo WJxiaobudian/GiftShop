@@ -10,12 +10,18 @@
 #import "GSHotCell.h"
 #import "GT_NetTools.h"
 #import "GSHotModel.h"
+#import "FCXRefreshFooterView.h"
+#import "UIScrollView+FCXRefresh.h"
 #import "GSDetailViewController.h"
-#define URL @"http://api.liwushuo.com/v2/items?gender=1&generation=1&limit=50&offset=0"
+#define URL @"http://api.liwushuo.com/v2/items?gender=1&generation=1&limit=50&offset="
 static NSString *identifier = @"item_id";
 @interface GSHotController ()<UICollectionViewDataSource, UICollectionViewDelegate>
 // 用来保存解析出来的数据
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
+@property (nonatomic, strong) FCXRefreshFooterView *footerView;
+// 记录url中page的值从而改变数据的变化
+@property (nonatomic, assign) NSInteger page;
 @end
 
 @implementation GSHotController
@@ -28,20 +34,47 @@ static NSString *identifier = @"item_id";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 自定义标题
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(150, 20, 114, 44)];
+    label.text = @"热门";
+    label.textAlignment = NSTextAlignmentCenter;
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:25 weight:0.8];
+    self.navigationItem.titleView = label;
     // 设置代理
     self.hv.listCollectionView.delegate = self;
     self.hv.listCollectionView.dataSource = self;
     // 注册item
     [self.hv.listCollectionView registerNib:[UINib nibWithNibName:@"GSHotCell" bundle:nil] forCellWithReuseIdentifier:identifier];
     // 调用加载数据的方法
-    [self loadData];
+    [self loadData:0];
+    // 调用上拉加载
+    [self addRefreshView];
 
 }
+#pragma mark 下拉刷新和上拉加载更多
+- (void)addRefreshView {
+    __weak __typeof(self)weakSelf = self;
+    // 上拉加载更多
+    _footerView = [self.hv.listCollectionView addFooterWithRefreshHandler:^(FCXRefreshBaseView *refreshView) {
+        [weakSelf loadMoreAction];
+    }];
+}
+// 上拉加载
+- (void)loadMoreAction {
+    __weak UICollectionView *weakCollectionView = self.hv.listCollectionView;
+    __weak FCXRefreshFooterView *weakFooterView = _footerView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self loadData:_page+=50];
+        [weakCollectionView reloadData];
+        [weakFooterView endRefresh];
+    });
+}
+
 #pragma mark 加载数据
-- (void)loadData {
+- (void)loadData:(NSInteger)page {
     self.dataArray = [NSMutableArray array];
-    
-    [GT_NetTools solveDataWithUrl:URL HttpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
+    [GT_NetTools solveDataWithUrl:[NSString stringWithFormat:@"%@"@"%ld", URL, page] HttpMethod:@"GET" HttpBody:nil revokeBlock:^(NSData *data) {
         NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         NSMutableDictionary *dict = dictionary[@"data"];
         for (NSDictionary *dic in dict[@"items"]) {
@@ -53,7 +86,6 @@ static NSString *identifier = @"item_id";
         [self.hv.listCollectionView reloadData];
     }];
 }
-
 #pragma mark 实现代理方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.dataArray.count;
