@@ -7,9 +7,13 @@
 //
 
 #import "GSDetailViewController.h"
+#import "UIImageView+WebCache.h"
 @interface GSDetailViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIWebView *webView;
+// 头部的scrollView
+@property (nonatomic, strong) UIScrollView *topScrollView;
+
 @end
 
 @implementation GSDetailViewController
@@ -17,15 +21,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.webView = [[UIWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:@selector(backHot)];
+    self.navigationItem.leftBarButtonItem = left;
+    UIBarButtonItem *right = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareAction)];
+    self.navigationItem.rightBarButtonItem = right;
+    // 初始化
+    self.topScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0,0, self.view.frame.size.width, 480)];
+    self.topScrollView.backgroundColor = [UIColor redColor];
+
+    self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, -60, self.view.bounds.size.width, self.view.bounds.size.height+100)];
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.model.url]];
     [self.webView loadRequest:request];
-    [self.view addSubview:self.webView];
-    // 自适应屏幕的宽度
+    self.webView.scrollView.bounces = NO;
     self.webView.scalesPageToFit = YES;
+    [self.view addSubview:self.webView];
+    
+    [self.webView.scrollView addSubview:self.topScrollView];
+
     self.webView.delegate = self;
+    // 设置底部的view
+    UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0,CGRectGetMaxY([UIScreen mainScreen].bounds) - 56, self.view.frame.size.width, 56)];
+    bottomView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:bottomView];
     // Do any additional setup after loading the view.
 }
+// 左边item的按钮响应
+- (void)backHot {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+// 右边item的按钮响应
+- (void)shareAction {
+    
+}
+
 #pragma mark UIWebView的代理方法
 // 开始加载
 - (void)webViewDidStartLoad:(UIWebView *)webView {

@@ -34,13 +34,6 @@ static NSString *identifier = @"item_id";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 自定义标题
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(150, 20, 114, 44)];
-    label.text = @"热门";
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor whiteColor];
-    label.font = [UIFont systemFontOfSize:25 weight:0.8];
-    self.navigationItem.titleView = label;
     // 设置代理
     self.hv.listCollectionView.delegate = self;
     self.hv.listCollectionView.dataSource = self;
@@ -103,7 +96,7 @@ static NSString *identifier = @"item_id";
     GSDetailViewController *dvc = [[GSDetailViewController alloc] init];
     dvc.model = self.dataArray[indexPath.row];
     [dvc setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:dvc animated:YES];
+    [self.navigationController pushViewController:dvc animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

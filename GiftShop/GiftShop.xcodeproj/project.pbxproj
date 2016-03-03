@@ -121,7 +121,6 @@
 		834143951C86701400EAB4C9 /* GSFirrstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 834143851C86701400EAB4C9 /* GSFirrstModel.m */; };
 		834143961C86701400EAB4C9 /* GSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 834143881C86701400EAB4C9 /* GSCategory.m */; };
 		834143971C86701400EAB4C9 /* GSFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */; };
-		834143981C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png in Resources */ = {isa = PBXBuildFile; fileRef = 8341438B1C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png */; };
 		C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6821C8674280070384C /* GSDetailViewController.m */; };
 		C2AAC68F1C8674280070384C /* GSHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6841C8674280070384C /* GSHotController.m */; };
 		C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6861C8674280070384C /* GT_NetTools.m */; };
@@ -135,6 +134,11 @@
 		C2AAC6AA1C86D6AB0070384C /* FCXRefreshFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A21C86D6AB0070384C /* FCXRefreshFooterView.m */; };
 		C2AAC6AB1C86D6AB0070384C /* FCXRefreshHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A41C86D6AB0070384C /* FCXRefreshHeaderView.m */; };
 		C2AAC6AC1C86D6AB0070384C /* UIScrollView+FCXRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6A61C86D6AB0070384C /* UIScrollView+FCXRefresh.m */; };
+		C2AAC6DB1C887C210070384C /* GSGiftModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6DA1C887C210070384C /* GSGiftModel.m */; };
+		C2AAC6DE1C887C490070384C /* GSStrategyHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6DD1C887C490070384C /* GSStrategyHeaderCollectionReusableView.m */; };
+		C2AAC6E41C887C7A0070384C /* GSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6E01C887C7A0070384C /* GSCollectionViewCell.m */; };
+		C2AAC6E51C887C7A0070384C /* GSCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2AAC6E11C887C7A0070384C /* GSCollectionViewCell.xib */; };
+		C2AAC6E61C887C7A0070384C /* GSHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6E31C887C7A0070384C /* GSHeaderCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -361,7 +365,6 @@
 		834143881C86701400EAB4C9 /* GSCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCategory.m; sourceTree = "<group>"; };
 		834143891C86701400EAB4C9 /* GSFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirstCollectionViewCell.h; sourceTree = "<group>"; };
 		8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirstCollectionViewCell.m; sourceTree = "<group>"; };
-		8341438B1C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "屏幕快照 2016-03-01 下午9.44.50.png"; sourceTree = "<group>"; };
 		C2AAC67E1C8673630070384C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C2AAC6811C8674280070384C /* GSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDetailViewController.h; sourceTree = "<group>"; };
 		C2AAC6821C8674280070384C /* GSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDetailViewController.m; sourceTree = "<group>"; };
@@ -386,6 +389,15 @@
 		C2AAC6A41C86D6AB0070384C /* FCXRefreshHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCXRefreshHeaderView.m; sourceTree = "<group>"; };
 		C2AAC6A51C86D6AB0070384C /* UIScrollView+FCXRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+FCXRefresh.h"; sourceTree = "<group>"; };
 		C2AAC6A61C86D6AB0070384C /* UIScrollView+FCXRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+FCXRefresh.m"; sourceTree = "<group>"; };
+		C2AAC6D91C887C210070384C /* GSGiftModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftModel.h; sourceTree = "<group>"; };
+		C2AAC6DA1C887C210070384C /* GSGiftModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGiftModel.m; sourceTree = "<group>"; };
+		C2AAC6DC1C887C490070384C /* GSStrategyHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSStrategyHeaderCollectionReusableView.h; path = View/GSStrategyHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		C2AAC6DD1C887C490070384C /* GSStrategyHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSStrategyHeaderCollectionReusableView.m; path = View/GSStrategyHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		C2AAC6DF1C887C7A0070384C /* GSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSCollectionViewCell.h; path = Controller/GSCollectionViewCell.h; sourceTree = "<group>"; };
+		C2AAC6E01C887C7A0070384C /* GSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSCollectionViewCell.m; path = Controller/GSCollectionViewCell.m; sourceTree = "<group>"; };
+		C2AAC6E11C887C7A0070384C /* GSCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GSCollectionViewCell.xib; path = Controller/GSCollectionViewCell.xib; sourceTree = "<group>"; };
+		C2AAC6E21C887C7A0070384C /* GSHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GSHeaderCollectionReusableView.h; path = Controller/GSHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		C2AAC6E31C887C7A0070384C /* GSHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GSHeaderCollectionReusableView.m; path = Controller/GSHeaderCollectionReusableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -895,6 +907,13 @@
 		834143721C86701400EAB4C9 /* Category(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				C2AAC6DF1C887C7A0070384C /* GSCollectionViewCell.h */,
+				C2AAC6E01C887C7A0070384C /* GSCollectionViewCell.m */,
+				C2AAC6E11C887C7A0070384C /* GSCollectionViewCell.xib */,
+				C2AAC6E21C887C7A0070384C /* GSHeaderCollectionReusableView.h */,
+				C2AAC6E31C887C7A0070384C /* GSHeaderCollectionReusableView.m */,
+				C2AAC6DC1C887C490070384C /* GSStrategyHeaderCollectionReusableView.h */,
+				C2AAC6DD1C887C490070384C /* GSStrategyHeaderCollectionReusableView.m */,
 				834143731C86701400EAB4C9 /* Controller */,
 				8341437D1C86701400EAB4C9 /* CQ_NetTools.h */,
 				8341437E1C86701400EAB4C9 /* CQ_NetTools.m */,
@@ -902,7 +921,6 @@
 				834143801C86701400EAB4C9 /* GSCategoryManager.m */,
 				834143811C86701400EAB4C9 /* Model */,
 				834143861C86701400EAB4C9 /* View */,
-				8341438B1C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png */,
 			);
 			path = "Category(分类)";
 			sourceTree = "<group>";
@@ -926,6 +944,8 @@
 		834143811C86701400EAB4C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2AAC6D91C887C210070384C /* GSGiftModel.h */,
+				C2AAC6DA1C887C210070384C /* GSGiftModel.m */,
 				834143821C86701400EAB4C9 /* GSCategoryModel.h */,
 				834143831C86701400EAB4C9 /* GSCategoryModel.m */,
 				834143841C86701400EAB4C9 /* GSFirrstModel.h */,
@@ -1067,7 +1087,6 @@
 			files = (
 				37D8A1DD1C872ADD0059A875 /* GSFirst.xib in Resources */,
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
-				834143981C86701400EAB4C9 /* 屏幕快照 2016-03-01 下午9.44.50.png in Resources */,
 				C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */,
 				834143911C86701400EAB4C9 /* PresentViewController.xib in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
@@ -1075,6 +1094,7 @@
 				37FB26431C8466A50003F3D3 /* MJRefresh.bundle in Resources */,
 				37D8A1E01C872ADD0059A875 /* GSGiftShopCell.xib in Resources */,
 				8341438C1C86701400EAB4C9 /* 1.jpg in Resources */,
+				C2AAC6E51C887C7A0070384C /* GSCollectionViewCell.xib in Resources */,
 				8341438F1C86701400EAB4C9 /* GSStrategyViewController.xib in Resources */,
 				C2AAC6A81C86D6AB0070384C /* blueArrow@2x.png in Resources */,
 				C2AAC6A71C86D6AB0070384C /* blueArrow.png in Resources */,
@@ -1096,6 +1116,7 @@
 				37FB25CB1C84667D0003F3D3 /* AFURLRequestSerialization.m in Sources */,
 				37FB26771C8466AF0003F3D3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				37FB25CA1C84667D0003F3D3 /* AFURLConnectionOperation.m in Sources */,
+				C2AAC6E41C887C7A0070384C /* GSCollectionViewCell.m in Sources */,
 				37D8A1D81C872ADD0059A875 /* GSVerticalButton.m in Sources */,
 				37FB26361C8466A50003F3D3 /* MJRefreshBackFooter.m in Sources */,
 				37FB25E21C8466880003F3D3 /* UIAlertView+AFNetworking.m in Sources */,
@@ -1123,6 +1144,7 @@
 				37420C7C1C852409002CE740 /* GSMine.m in Sources */,
 				37FB26711C8466AF0003F3D3 /* SDWebImageManager.m in Sources */,
 				37FB266B1C8466AF0003F3D3 /* NSData+ImageContentType.m in Sources */,
+				C2AAC6DB1C887C210070384C /* GSGiftModel.m in Sources */,
 				37FB263C1C8466A50003F3D3 /* MJRefreshAutoStateFooter.m in Sources */,
 				37FB25CC1C84667D0003F3D3 /* AFURLResponseSerialization.m in Sources */,
 				37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */,
@@ -1159,6 +1181,7 @@
 				37FB25E01C8466880003F3D3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				37FB26051C84669C0003F3D3 /* NSObject+MJKeyValue.m in Sources */,
 				834143971C86701400EAB4C9 /* GSFirstCollectionViewCell.m in Sources */,
+				C2AAC6E61C887C7A0070384C /* GSHeaderCollectionReusableView.m in Sources */,
 				37FB25C61C84667D0003F3D3 /* AFHTTPRequestOperationManager.m in Sources */,
 				37FB26731C8466AF0003F3D3 /* UIButton+WebCache.m in Sources */,
 				37FB266D1C8466AF0003F3D3 /* SDWebImageCompat.m in Sources */,
@@ -1176,6 +1199,7 @@
 				37FB25E31C8466880003F3D3 /* UIButton+AFNetworking.m in Sources */,
 				37FB263A1C8466A50003F3D3 /* MJRefreshAutoGifFooter.m in Sources */,
 				37FB26741C8466AF0003F3D3 /* UIImage+GIF.m in Sources */,
+				C2AAC6DE1C887C490070384C /* GSStrategyHeaderCollectionReusableView.m in Sources */,
 				37FB25E61C8466880003F3D3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				37D8A1B51C872ACE0059A875 /* GSStrategyController.m in Sources */,
 				37D8A1F81C872B040059A875 /* UIView+SDExtension.m in Sources */,
