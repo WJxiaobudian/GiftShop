@@ -16,5 +16,5 @@
 
 @property (nonatomic, copy) NSString *cover_webp_url;
 
-@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *titleLabel;
 @end

@@ -166,16 +166,11 @@
             cell.label.text = model.name;
             [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
             break;
-
         }
-            
         default:
             break;
     }
-    
     return cell;
-    
-
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {

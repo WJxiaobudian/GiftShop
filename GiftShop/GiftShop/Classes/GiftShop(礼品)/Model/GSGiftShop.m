@@ -7,9 +7,15 @@
 //
 
 #import "GSGiftShop.h"
-
+#import "GSExtenssion.h"
 @implementation GSGiftShop
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key  {
+    if([key isEqualToString:@"id"]){
+        self.userId = value;
+    }
+//    [super setValue:value forUndefinedKey:key];
+}
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     
@@ -23,11 +29,25 @@
     
     giftShop.url = dict[@"url"];
     
+    giftShop.userId = dict[@"id"];
+    
     giftShop.content_url = dict[@"content_url"];
     
-    giftShop.created_at = dict[@"created_at"];
+   
+    
+    NSString *str=dict[@"created_at"];//时间戳
+    NSTimeInterval time=[str doubleValue]+28800;//因为时差问题要加8小时 == 28800 sec
+    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"MM-dd";
+    
+    NSString *weekDay = [GSExtenssion getWeekDayFordate:time];
+    
+    giftShop.created_at = [NSString stringWithFormat:@"%@  %@",[formatter stringFromDate:detaildate], weekDay];
     
     giftShop.cover_webp_url = dict[@"cover_webp_url"];
+    
+    giftShop.NumString = [[dict[@"url"] componentsSeparatedByString:@"/"] lastObject];
     
     return giftShop;
 }

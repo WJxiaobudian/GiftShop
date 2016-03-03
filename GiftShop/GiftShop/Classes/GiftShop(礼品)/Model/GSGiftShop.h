@@ -24,6 +24,10 @@
 
 @property (nonatomic, copy) NSString *created_at;
 
+@property (nonatomic, copy) NSString *NumString;
+
+@property (nonatomic, copy) NSString *userId;
+
 
 - (instancetype)initWithDict:(NSDictionary *)dict;
 

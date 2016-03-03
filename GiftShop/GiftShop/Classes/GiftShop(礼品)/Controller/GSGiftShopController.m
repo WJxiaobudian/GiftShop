@@ -20,6 +20,8 @@
 #import "GSFirstModel.h"
 #import "GSFirstCell.h"
 #import "GSGiftShopScrollController.h"
+#import "GSHeader.h"
+#import "SVProgressHUD.h"
 @interface GSGiftShopController ()<SDCycleScrollViewDelegate, firstCellDelegate>
 
 @property (nonatomic, strong) NSMutableArray *scrollArray;
@@ -29,18 +31,18 @@
 
 @property (nonatomic, strong) NSMutableArray *giftShopArray;
 
-@property (nonatomic, assign) int offset;
+@property (nonatomic, assign) NSInteger offset;
 
 @property (nonatomic, strong) NSMutableDictionary *dict;
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 static NSString *const giftShopID = @"GiftShop";
 
 static NSString *const firstID = @"first";
 @implementation GSGiftShopController
-
 
 - (NSMutableArray *)dataArray {
     if (!_dataArray) {
@@ -71,18 +73,14 @@ static NSString *const firstID = @"first";
     return _scrollArray;
 }
 
-- (NSMutableArray *)giftShopArray {
-    if (!_giftShopArray) {
-        _giftShopArray = [NSMutableArray array];
-    }
-    return _giftShopArray;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
  
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(leftClick)];
+    self.navigationItem.title = @"礼品屋";
+   
      self.urlString = self.urlString;
-    
     
     [self setupNav];
     
@@ -92,6 +90,8 @@ static NSString *const firstID = @"first";
     
     [self setupRefresh];
     
+    self.giftShopArray = [NSMutableArray array];
+    
 }
 
 
@@ -99,12 +99,9 @@ static NSString *const firstID = @"first";
     _urlString = urlString;
 }
 
+
 - (void)setupNav {
-    
-    
-    
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 49)];
-    
+
     self.tableView.showsVerticalScrollIndicator = NO;
     
     self.tableView.backgroundColor = [UIColor clearColor];
@@ -124,7 +121,7 @@ static NSString *const firstID = @"first";
 
             GSFirstModel *model = [[GSFirstModel alloc] initWithDict:dictImage];
             [self.dataArray addObject:model];
-            NSLog(@"%@",model.urlString);
+        
          }
         NSIndexPath *index = [NSIndexPath indexPathForItem:0 inSection:0];
         [self.tableView reloadRowsAtIndexPaths:@[index] withRowAnimation:UITableViewRowAnimationNone];
@@ -166,51 +163,60 @@ static NSString *const firstID = @"first";
 - (void)setupRefresh {
     
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewGift)];
-    
+
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     [self.tableView.mj_header beginRefreshing];
-    
-    
+
     self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreGift)];
 
 }
 
 - (void)loadNewGift {
     
-    [self.tableView.mj_footer endRefreshing];
-    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20&offset=0", self.urlString];
     
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    [self.tableView.mj_footer endRefreshing];
+    self.offset = 0;
+    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20", self.urlString];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"offset"] = @(self.offset);
     [self.giftShopArray removeAllObjects];
-    [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [[AFHTTPSessionManager manager] GET:string parameters:dict success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *array = responseObject[@"data"];
+        [SVProgressHUD dismiss];
         for (NSDictionary *dict in array[@"items"]) {
             GSGiftShop *giftShop = [[GSGiftShop alloc] initWithDict:dict];
  
             [self.giftShopArray addObject:giftShop];
-            [self.tableView reloadData];
-            [self.tableView.mj_header endRefreshing];
         }
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
 
+        [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [SVProgressHUD dismiss];
         [self.tableView.mj_header endRefreshing];
     }];
 }
 
 - (void)loadMoreGift {
+    
     [self.tableView.mj_header endRefreshing];
     self.offset += 20;
-    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20&offset=%d", self.urlString, self.offset];
-    
-    [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/channels/%@/items?gender=1&generation=1&limit=20", self.urlString];
+    NSMutableDictionary *diction = [NSMutableDictionary dictionary];
+    diction[@"offset"] = @(self.offset);
+    [[AFHTTPSessionManager manager] GET:string parameters:diction success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *array = responseObject[@"data"];
         for (NSDictionary *dict in array[@"items"]) {
-            GSGiftShop *giftShop = [[GSGiftShop alloc] initWithDict:dict];
-
-            [self.giftShopArray addObject:giftShop];
-            [self.tableView reloadData];
-            [self.tableView.mj_footer endRefreshing];
             
+            GSGiftShop *giftShop = [[GSGiftShop alloc] initWithDict:dict];
+            [self.giftShopArray addObject:giftShop];
         }
+
+        [self.tableView reloadData];
+        [self.tableView.mj_footer endRefreshing];
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         self.offset -= 20;
         [self.tableView.mj_footer endRefreshing];
@@ -221,20 +227,32 @@ static NSString *const firstID = @"first";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    self.tableView.mj_footer.hidden = (self.giftShopArray.count == 0);
+
         if (section == 0) {
             if (![self.urlString isEqualToString:@"100"]) {
                 return 0;
             }
             return 1;
         } else {
-            self.tableView.mj_footer.hidden = (self.giftShopArray.count == 0);
             return self.giftShopArray.count;
-            
         }
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return 0;
+    } else {
+        return 5;
+    }
+}
+
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.giftShopArray.count + 1 ;
+   
+    return    2;
 }
 
 
@@ -254,7 +272,6 @@ static NSString *const firstID = @"first";
     
         GSGiftShopCell *cell = [tableView dequeueReusableCellWithIdentifier:giftShopID];
         cell.giftShop = self.giftShopArray[indexPath.row];
-
         cell.backgroundColor = [UIColor clearColor];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -269,14 +286,14 @@ static NSString *const firstID = @"first";
     switch (sender.tag) {
         case 2:
         {
-            NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/posts/%@",model.urlString];
+            NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/posts/%@",model.Nid];
+            strategy.urlString = string;
+            
             [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
                 NSDictionary *dict= responseObject[@"data"];
-                NSLog(@"%@",dict);
-                strategy.cover_webp_url = dict[@"cover_image_url"];
+                strategy.cover_webp_url = dict[@"cover_webp_url"];
                 strategy.title = dict[@"title"];
-                strategy.urlString = dict[@"content_url"];
-                NSLog(@"%@",strategy.cover_webp_url);
+        
                 [strategy setHidesBottomBarWhenPushed:YES];
                 [self.navigationController pushViewController:strategy animated:YES];
             } failure:^(NSURLSessionDataTask *task, NSError *error) {
@@ -286,32 +303,36 @@ static NSString *const firstID = @"first";
             break;
             
         default:
+            
             scroll.url = model.url;
             [scroll setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:scroll animated:YES];
-        
+            
             break;
     }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        return 130;
+        return 120;
     }
-    return 200;
+    return 180;
 }
+
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     GSStrategyController *strategy = [[GSStrategyController alloc] init];
     
     GSGiftShop *gift = self.giftShopArray[indexPath.row];
-    strategy.urlString = gift.content_url;
+    
     strategy.cover_webp_url = gift.cover_webp_url;
-    strategy.title = gift.title;
+    strategy.titleLabel = gift.title;
+    NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/posts/%@",gift.NumString];
+    strategy.urlString = string;
     [strategy setHidesBottomBarWhenPushed:YES];
     
     [self.navigationController pushViewController:strategy animated:YES];
-    
 }
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {

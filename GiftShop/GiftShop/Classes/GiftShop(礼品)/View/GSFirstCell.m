@@ -21,7 +21,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.scrollView= [[UIScrollView alloc] init];
-        self.scrollView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 130);
+        self.scrollView.frame = CGRectMake(0, 0, CGRectGetWidth([UIScreen mainScreen].bounds), 120);
         self.scrollView.showsHorizontalScrollIndicator = NO;
         self.scrollView.showsVerticalScrollIndicator = NO;
         self.scrollView.bounces = NO;
@@ -36,8 +36,8 @@
     
     CGFloat X = 0;
     CGFloat Y = 0;
-    CGFloat W = 130;
-    CGFloat H = 130;
+    CGFloat W = 120;
+    CGFloat H = 120;
     
     for ( int i = 1; i < data.count; i ++) {
         GSFirst *firstView = [GSFirst first];

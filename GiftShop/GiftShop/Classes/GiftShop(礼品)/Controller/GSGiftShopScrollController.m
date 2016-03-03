@@ -31,16 +31,15 @@ static NSString *const giftShopID = @"GiftShop";
 }
 
 - (void)setupRefresh {
-    // 显示指示器
     
     NSString *string = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/collections/%@/posts?gender=1&generation=1&limit=20&offset=0", self.url];
-    NSLog(@"%@",string);
+   
     [[AFHTTPSessionManager manager] GET:string parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSDictionary *dict = responseObject[@"data"];
         NSArray *array = dict[@"posts"];
         for (NSDictionary *dic in array) {
             GSGiftShop *gift = [[GSGiftShop alloc] initWithDict:dic];
-            NSLog(@"%@",gift.url);
+          
             [self.dataArray addObject:gift];
             [self.tableView reloadData];
             
@@ -75,9 +74,10 @@ static NSString *const giftShopID = @"GiftShop";
     
     GSStrategyController *strategy = [[GSStrategyController alloc] init];
     GSGiftShop *shop = self.dataArray[indexPath.row];
-    strategy.urlString = shop.content_url;
+    strategy.urlString = [NSString stringWithFormat:@"http://api.liwushuo.com/v2/posts/%@",shop.userId];
+    NSLog(@"%@",strategy.urlString);
     strategy.cover_webp_url = shop.cover_webp_url;
-    strategy.title = shop.title;
+    strategy.titleLabel = shop.title;
     [self.navigationController pushViewController:strategy animated:YES];
 }
 @end

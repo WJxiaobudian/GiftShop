@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="GSHeader">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="38"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-vI-A6b">
+                    <rect key="frame" x="0.0" y="0.0" width="399" height="38"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0UY-vI-A6b" secondAttribute="bottom" id="GuT-dj-jYO"/>
+                <constraint firstItem="0UY-vI-A6b" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PqB-RK-rnQ"/>
+                <constraint firstAttribute="trailing" secondItem="0UY-vI-A6b" secondAttribute="trailing" id="euU-Cl-zcS"/>
+                <constraint firstItem="0UY-vI-A6b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="exL-QK-7J4"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="HeaderLabel" destination="0UY-vI-A6b" id="9tM-2z-BnT"/>
+            </connections>
+            <point key="canvasLocation" x="312.5" y="277"/>
+        </view>
+    </objects>
+</document>

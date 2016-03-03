@@ -10,12 +10,13 @@
 
 @implementation GSFirstModel
 
-- (void)setValue:(id)value forKey:(NSString *)key {
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     if ([key isEqualToString:@"id"]) {
-        value = self.Nid;
+        self.Nid = value;
     }
-    [super setValue:value forKey:key];
 }
+
+
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
     GSFirstModel * firstModel = [[GSFirstModel alloc] init];
