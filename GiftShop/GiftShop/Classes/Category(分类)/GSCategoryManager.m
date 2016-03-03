@@ -10,6 +10,7 @@
 #import "CQ_NetTools.h"
 #import "GSCategoryModel.h"
 #import "GSFirrstModel.h"
+#import "GSGiftModel.h"
 @interface GSCategoryManager ()
 
 @end
@@ -35,12 +36,6 @@ static GSCategoryManager *manager = nil;
     return _dataArr;
 }
 
-- (NSMutableArray *)nameArr {
-    if (!_nameArr) {
-        _nameArr = [NSMutableArray array];
-    }
-    return _nameArr;
-}
 
 - (NSMutableArray *)catagryArr {
     if (!_catagryArr) {
@@ -78,16 +73,32 @@ static GSCategoryManager *manager = nil;
         NSMutableDictionary *dict = dic[@"data"];
 
 //        NSLog(@"%@",dict[@"channel_groups"]);
+        
+        self.dicA = [NSMutableDictionary dictionary];
+        self.firstHeadArr = [NSMutableArray array];
+        
         for (NSDictionary *d in dict[@"channel_groups"]) {
-//                NSLog(@"%@",d[@"channels"]);
+            NSString  *name = d[@"name"];
+//            NSLog(@"%@",name);
+            [self.firstHeadArr addObject:name];
+            
+            NSMutableArray *arr = [NSMutableArray array];
+            
             for (NSDictionary *dictionary in d[@"channels"]) {
                 GSFirrstModel *model = [[GSFirrstModel alloc] init];
                 [model setValuesForKeysWithDictionary:dictionary];
-                [self.catagryArr addObject:model];
-                NSLog(@"%@", self.catagryArr);
+                [arr addObject:model];
+//                NSLog(@"%@", model.name);
+//                [arr addObject:self.catagryArr];
         }
+         
+            [self.dicA setValue:arr forKey:name];
+        
         }
+//        NSLog(@"%@",self.dicA);
+
 //
+        finish();
     }];
     
 }
@@ -97,22 +108,46 @@ static GSCategoryManager *manager = nil;
     return self.dataArr.count;
 }
 
-- (NSInteger )catagrArrCount {
-    return self.catagryArr.count;
-}
 
-- (GSFirrstModel *)modelWithFirstIndex:(NSInteger)index {
-    
-    GSFirrstModel *model = self.catagryArr[index];
-    return model;
-    
-}
 
 - (GSCategoryModel *)modelWithIndex:(NSInteger)index {
     
     GSCategoryModel *model = self.dataArr[index];
     return model;
 }
+#pragma mark-----presentMethod
 
+- (void)requestPresentWithUrl:(NSString *)url finish:(void (^)())finish {
 
+    [CQ_NetTools solveDataWithUrl:url HttopMethod:@"get" HttpBoody:nil revokeBlock:^(NSData *data) {
+        
+        NSMutableDictionary *dic1 =  [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        
+        NSMutableDictionary *dict = dic1[@"data"];
+        self.nameArr = [NSMutableArray array];
+      self.dictName = [NSMutableDictionary dictionary];
+//        NSLog(@"%@",dictName);
+        for (NSMutableDictionary *dic in dict[@"categories"]) {
+            NSString *name = dic[@"name"];
+//            NSLog(@"%@",name);
+            [self.nameArr addObject:name];
+            
+            NSMutableArray *catrArr = [NSMutableArray array];
+            
+            for (NSDictionary *dictCtr in dic[@"subcategories"]) {
+                
+                GSGiftModel *model = [[GSGiftModel alloc] init];
+                [model setValuesForKeysWithDictionary:dictCtr];
+                [catrArr addObject:model];
+            }
+            
+            [self.dictName setValue:catrArr forKey:name];
+            
+        }
+//        NSLog(@"%@",self.dictName);
+        NSLog(@"%@",self.nameArr);
+        finish ();
+    }];
+    
+}
 @end

@@ -35,7 +35,9 @@
     
     self.svc = [[GSStrategyViewController alloc] init];
     self.pvc = [[PresentViewController alloc] init];
-    [self.view addSubview:self.pvc.view];
+    [self addChildViewController:self.svc];
+    [self addChildViewController:self.pvc];
+    
     [self.view addSubview:self.svc.view];
     self.view.backgroundColor = [UIColor whiteColor];
 }
@@ -44,11 +46,20 @@
 - (void)segmentAction:(UISegmentedControl *)segment {
     switch (segment.selectedSegmentIndex) {
         case 0:
-            [self.view bringSubviewToFront:self.svc.view];
-            
-            break;
+            if (self.svc.view.superview == nil) {
+                [self.pvc.view removeFromSuperview];
+                [self.view addSubview:self.svc.view];
+                
+            }
+             break;
+           
         case 1:
-            [self.view bringSubviewToFront:self.pvc.view];
+            if (self.pvc.view.superview == nil) {
+                [self.svc.view removeFromSuperview];
+                [self.view addSubview:self.pvc.view];
+                
+            }
+            break;
         default:
             break;
     }

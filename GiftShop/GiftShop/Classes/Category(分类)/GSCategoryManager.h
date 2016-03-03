@@ -14,6 +14,10 @@
 @property (nonatomic,strong)NSMutableArray *dataArr;
 @property (nonatomic,strong)NSMutableArray *nameArr;
 @property (nonatomic,strong)NSMutableArray *catagryArr;
+@property (nonatomic,strong)NSMutableDictionary *dicA;
+@property (nonatomic,strong)NSMutableArray *arr;
+@property (nonatomic,strong)NSMutableDictionary *dictName;
+@property (nonatomic,strong)NSMutableArray *firstHeadArr;
 + (instancetype)shardInstance;
 
 
@@ -21,8 +25,14 @@
 - (void)requestCategoryWithUrl:(NSString *)url finish:(void(^)())finish;
 
 - (NSInteger)countToArray;
-- (NSInteger)catagrArrCount;
+
 
 - (GSCategoryModel *)modelWithIndex:(NSInteger)index;
 - (GSFirrstModel *)modelWithFirstIndex:(NSInteger)index ;
+
+
+// presentMethod
+- (void)requestPresentWithUrl:(NSString *)url finish:(void(^)())finish;
+
+
 @end

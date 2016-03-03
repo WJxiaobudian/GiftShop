@@ -14,6 +14,7 @@
 #import "PrefixHeader.pch"
 #import "GSFirstCollectionViewCell.h"
 #import "GSFirrstModel.h"
+#import "GSStrategyHeaderCollectionReusableView.h"
 #define interval 20
 
 #define IMAGEURL @"http://api.liwushuo.com/v2/collections?limit=6&offset=0"
@@ -21,7 +22,7 @@
 @interface GSStrategyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 //@property (nonatomic,strong)NSMutableArray *
 @property (weak, nonatomic) IBOutlet UICollectionView *firstCollection;
-@property (weak, nonatomic) IBOutlet UILabel *firstLabel;
+
 
 @property (weak, nonatomic) IBOutlet UIView *contantView;
 @end
@@ -30,6 +31,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.firstCollection.delegate = self;
+    self.firstCollection.dataSource = self;
+
     [self makeCollection];
     
     [self sliderImage];
@@ -37,15 +42,13 @@
     [self registerCell];
     
     [[GSCategoryManager shardInstance]requestCategoryWithUrl:FIRSTURL finish:^{
-        
+        [self.firstCollection reloadData];
     }];
     
         // Do any additional setup after loading the view from its nib.
 }
 - (void)makeCollection {
     
-    self.firstCollection.delegate = self;
-    self.firstCollection.dataSource = self;
     
     UICollectionViewFlowLayout *firstLayout = [[UICollectionViewFlowLayout alloc] init];
     firstLayout.itemSize = CGSizeMake((self.firstCollection.bounds.size.width  - 50) / 4, (self.firstCollection.bounds.size.width - 50)/ 4);
@@ -53,6 +56,9 @@
     firstLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     firstLayout.minimumInteritemSpacing = 10;
     firstLayout.minimumLineSpacing = 10;
+    firstLayout.sectionInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    firstLayout.headerReferenceSize = CGSizeMake(320, 50);
+
     self.firstCollection.collectionViewLayout = firstLayout;
     
     
@@ -60,20 +66,121 @@
 - (void)registerCell {
     
     [self.firstCollection registerClass:[GSFirstCollectionViewCell class] forCellWithReuseIdentifier:@"firstCell"];
+    [self.firstCollection registerClass:[GSStrategyHeaderCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headCell"];
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    UICollectionReusableView *reusablleView = nil;
+    
+    if (kind == UICollectionElementKindSectionHeader) {
+        
+        GSStrategyHeaderCollectionReusableView *headerView = (GSStrategyHeaderCollectionReusableView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headCell" forIndexPath:indexPath];
+        switch (indexPath.section) {
+            case 0:
+              headerView.HeaderLabel.text =  [GSCategoryManager shardInstance].firstHeadArr[indexPath.section];
+                break;
+            case 1:
+                headerView.HeaderLabel.text =  [GSCategoryManager shardInstance].firstHeadArr[indexPath.section];
+                break;
+            case 2:
+                headerView.HeaderLabel.text =  [GSCategoryManager shardInstance].firstHeadArr[indexPath.section];
+                break;
+            case 3:
+                headerView.HeaderLabel.text =  [GSCategoryManager shardInstance].firstHeadArr[indexPath.section];
+                break;
+
+            default:
+                break;
+        }
+        
+        
+        reusablleView = headerView;
+    }
+    
+    
+    return reusablleView;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    
+    return 4;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+
     
-    return [[GSCategoryManager shardInstance] catagrArrCount];
+    switch (section) {
+        case 0:
+           return  [(NSMutableArray *)[GSCategoryManager shardInstance].dicA[@"品类"] count];
+        
+        case 1:
+            return  [(NSMutableArray *)[GSCategoryManager shardInstance].dicA[@"对象"] count];
+        case 2:
+            return  [(NSMutableArray *)[GSCategoryManager shardInstance].dicA[@"场合"] count];
+
+        case 3:
+            return  [(NSMutableArray *)[GSCategoryManager shardInstance].dicA[@"风格"] count];
+
+        default:
+            
+            break;
+            
+            
+            
+    }
+    
+    return 0;
+    
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     GSFirstCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"firstCell" forIndexPath:indexPath];
     
-    GSFirrstModel *model = [[GSCategoryManager shardInstance] modelWithFirstIndex:indexPath.row];
-    cell.label.text = model.name;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
+    
+    switch (indexPath.section) {
+        case 0: {
+            NSMutableArray *arr = [GSCategoryManager shardInstance].dicA[@"品类"];
+            GSFirrstModel *model = arr[indexPath.row];
+            cell.label.text = model.name;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
+
+            break;
+        }
+        case 1: {
+            NSMutableArray *arr = [GSCategoryManager shardInstance].dicA[@"对象"];
+            GSFirrstModel *model = arr[indexPath.row];
+            cell.label.text = model.name;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
+            break;
+        }
+        case 2: {
+            NSMutableArray *arr = [GSCategoryManager shardInstance].dicA[@"场合"];
+            GSFirrstModel *model = arr[indexPath.row];
+            cell.label.text = model.name;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
+            break;
+
+        }
+        case 3: {
+            NSMutableArray *arr = [GSCategoryManager shardInstance].dicA[@"风格"];
+            GSFirrstModel *model = arr[indexPath.row];
+            cell.label.text = model.name;
+            [cell.imageView sd_setImageWithURL:[NSURL URLWithString:model.icon_url]];
+            break;
+
+        }
+            
+        default:
+            break;
+    }
+    
     return cell;
     
+
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"%ld",(long)indexPath.row);
 }
 
 // 滑动图片加载

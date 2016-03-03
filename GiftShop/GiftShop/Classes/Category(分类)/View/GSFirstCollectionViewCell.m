@@ -27,7 +27,6 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(10, self.contentView.bounds.size.width - 25, self.contentView.bounds.size.width , 40)];
     self.label.text = @"测试";
     self.label.textAlignment = NSTextAlignmentCenter;
-    self.label.backgroundColor = [UIColor orangeColor];
     [self.contentView addSubview:self.label];
     
     
