@@ -14,4 +14,24 @@
     
 }
 
+- (instancetype)initWithDict:(NSDictionary *)dict {
+    GSHotModel *model = [[GSHotModel alloc] init];
+    
+    model.cover_image_url = dict[@"cover_image_url"];
+    
+    model.price = dict[@"price"];
+    
+    model.favorites_count = [dict[@"favorites_count"] integerValue];
+    
+    model.name = dict[@"name"];
+    
+    model.url = dict[@"url"];
+    
+    return model;
+    
+}
+
++ (instancetype)hotModelWithDict:(NSDictionary *)dict {
+    return [[self alloc] initWithDict:dict];
+}
 @end

@@ -16,9 +16,9 @@
 
 + (void)initialize {
     
-//    UINavigationBar *bar = [UINavigationBar appearance];
-//    [bar setBackgroundImage:[UIImage imageNamed:@"friendsTrend_login_click"] forBarMetrics:UIBarMetricsDefault];
-//    bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    UINavigationBar *bar = [UINavigationBar appearance];
+    [bar setBackgroundImage:[UIImage imageNamed:@"friendsTrend_login_click"] forBarMetrics:UIBarMetricsDefault];
+    bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     
 }
 

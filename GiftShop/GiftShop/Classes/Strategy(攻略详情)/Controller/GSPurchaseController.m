@@ -32,13 +32,15 @@
     webView.delegate = self;
     [self.view addSubview:webView];
     self.webView = webView;
+    [SVProgressHUD showWithStatus:@"正在加载"];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     [[AFHTTPSessionManager manager] GET:self.purchaseString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        [SVProgressHUD dismiss];
+       
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:responseObject[@"data"][@"purchase_url"]]];
         [self.webView loadRequest:request];
         
+         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
     }];

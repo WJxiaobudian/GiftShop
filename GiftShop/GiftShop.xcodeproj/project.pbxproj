@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		37420C7C1C852409002CE740 /* GSMine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C7B1C852409002CE740 /* GSMine.m */; };
 		37420C861C857843002CE740 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 37420C851C857843002CE740 /* Foundation+Log.m */; };
+		374CB66E1C88857000F36C1E /* GSPurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB66B1C88857000F36C1E /* GSPurchaseController.m */; };
+		374CB66F1C88857000F36C1E /* GSTaoBaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB66D1C88857000F36C1E /* GSTaoBaoController.m */; };
+		374CB6741C88858700F36C1E /* GSTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB6721C88858700F36C1E /* GSTabBarView.m */; };
+		374CB6751C88858700F36C1E /* GSTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374CB6731C88858700F36C1E /* GSTabBarView.xib */; };
+		374CB67B1C8885A900F36C1E /* GSExtenssion.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB6771C8885A900F36C1E /* GSExtenssion.m */; };
+		374CB67C1C8885A900F36C1E /* GSHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB6791C8885A900F36C1E /* GSHeader.m */; };
+		374CB67D1C8885A900F36C1E /* GSHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374CB67A1C8885A900F36C1E /* GSHeader.xib */; };
+		374CB6831C88862600F36C1E /* GSLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374CB6811C88862600F36C1E /* GSLoginController.m */; };
 		37D8A1B51C872ACE0059A875 /* GSStrategyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1B41C872ACE0059A875 /* GSStrategyController.m */; };
 		37D8A1D41C872ADD0059A875 /* GSGiftShopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1B91C872ADD0059A875 /* GSGiftShopController.m */; };
 		37D8A1D51C872ADD0059A875 /* GSGiftShopScrollController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1BB1C872ADD0059A875 /* GSGiftShopScrollController.m */; };
@@ -31,6 +39,7 @@
 		37D8A1F61C872B040059A875 /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1ED1C872B040059A875 /* SDCollectionViewCell.m */; };
 		37D8A1F71C872B040059A875 /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1EF1C872B040059A875 /* SDCycleScrollView.m */; };
 		37D8A1F81C872B040059A875 /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D8A1F11C872B040059A875 /* UIView+SDExtension.m */; };
+		37E9B3641C89284E008DB694 /* GSTaobao.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E9B3631C89284E008DB694 /* GSTaobao.m */; };
 		37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB25881C8465960003F3D3 /* Main.storyboard */; };
 		37FB258F1C8465960003F3D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37FB258D1C8465960003F3D3 /* LaunchScreen.storyboard */; };
 		37FB25AF1C84663A0003F3D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB25AA1C84663A0003F3D3 /* AppDelegate.m */; };
@@ -121,9 +130,7 @@
 		834143951C86701400EAB4C9 /* GSFirrstModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 834143851C86701400EAB4C9 /* GSFirrstModel.m */; };
 		834143961C86701400EAB4C9 /* GSCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 834143881C86701400EAB4C9 /* GSCategory.m */; };
 		834143971C86701400EAB4C9 /* GSFirstCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */; };
-		C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6821C8674280070384C /* GSDetailViewController.m */; };
 		C2AAC68F1C8674280070384C /* GSHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6841C8674280070384C /* GSHotController.m */; };
-		C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6861C8674280070384C /* GT_NetTools.m */; };
 		C2AAC6911C8674280070384C /* GSHotModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6891C8674280070384C /* GSHotModel.m */; };
 		C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6951C8674CC0070384C /* GSHotView.m */; };
 		C2AAC69A1C8677610070384C /* GSHotCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AAC6981C8677610070384C /* GSHotCell.m */; };
@@ -145,6 +152,20 @@
 		37420C7A1C852409002CE740 /* GSMine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMine.h; sourceTree = "<group>"; };
 		37420C7B1C852409002CE740 /* GSMine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMine.m; sourceTree = "<group>"; };
 		37420C851C857843002CE740 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		374CB66A1C88857000F36C1E /* GSPurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPurchaseController.h; sourceTree = "<group>"; };
+		374CB66B1C88857000F36C1E /* GSPurchaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPurchaseController.m; sourceTree = "<group>"; };
+		374CB66C1C88857000F36C1E /* GSTaoBaoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTaoBaoController.h; sourceTree = "<group>"; };
+		374CB66D1C88857000F36C1E /* GSTaoBaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTaoBaoController.m; sourceTree = "<group>"; };
+		374CB6711C88858700F36C1E /* GSTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTabBarView.h; sourceTree = "<group>"; };
+		374CB6721C88858700F36C1E /* GSTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTabBarView.m; sourceTree = "<group>"; };
+		374CB6731C88858700F36C1E /* GSTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSTabBarView.xib; sourceTree = "<group>"; };
+		374CB6761C8885A900F36C1E /* GSExtenssion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSExtenssion.h; sourceTree = "<group>"; };
+		374CB6771C8885A900F36C1E /* GSExtenssion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSExtenssion.m; sourceTree = "<group>"; };
+		374CB6781C8885A900F36C1E /* GSHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHeader.h; sourceTree = "<group>"; };
+		374CB6791C8885A900F36C1E /* GSHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHeader.m; sourceTree = "<group>"; };
+		374CB67A1C8885A900F36C1E /* GSHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSHeader.xib; sourceTree = "<group>"; };
+		374CB6801C88862600F36C1E /* GSLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginController.h; sourceTree = "<group>"; };
+		374CB6811C88862600F36C1E /* GSLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginController.m; sourceTree = "<group>"; };
 		37D8A1B31C872ACE0059A875 /* GSStrategyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStrategyController.h; sourceTree = "<group>"; };
 		37D8A1B41C872ACE0059A875 /* GSStrategyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStrategyController.m; sourceTree = "<group>"; };
 		37D8A1B81C872ADD0059A875 /* GSGiftShopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGiftShopController.h; sourceTree = "<group>"; };
@@ -187,6 +208,8 @@
 		37D8A1EF1C872B040059A875 /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
 		37D8A1F01C872B040059A875 /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		37D8A1F11C872B040059A875 /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		37E9B3621C89284E008DB694 /* GSTaobao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSTaobao.h; sourceTree = "<group>"; };
+		37E9B3631C89284E008DB694 /* GSTaobao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSTaobao.m; sourceTree = "<group>"; };
 		37FB257C1C8465960003F3D3 /* GiftShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiftShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37FB25891C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37FB258E1C8465960003F3D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -366,12 +389,8 @@
 		834143891C86701400EAB4C9 /* GSFirstCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFirstCollectionViewCell.h; sourceTree = "<group>"; };
 		8341438A1C86701400EAB4C9 /* GSFirstCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFirstCollectionViewCell.m; sourceTree = "<group>"; };
 		C2AAC67E1C8673630070384C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		C2AAC6811C8674280070384C /* GSDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDetailViewController.h; sourceTree = "<group>"; };
-		C2AAC6821C8674280070384C /* GSDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDetailViewController.m; sourceTree = "<group>"; };
 		C2AAC6831C8674280070384C /* GSHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotController.h; sourceTree = "<group>"; };
 		C2AAC6841C8674280070384C /* GSHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotController.m; sourceTree = "<group>"; };
-		C2AAC6851C8674280070384C /* GT_NetTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GT_NetTools.h; sourceTree = "<group>"; };
-		C2AAC6861C8674280070384C /* GT_NetTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GT_NetTools.m; sourceTree = "<group>"; };
 		C2AAC6881C8674280070384C /* GSHotModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotModel.h; sourceTree = "<group>"; };
 		C2AAC6891C8674280070384C /* GSHotModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSHotModel.m; sourceTree = "<group>"; };
 		C2AAC6941C8674CC0070384C /* GSHotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSHotView.h; sourceTree = "<group>"; };
@@ -411,9 +430,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374CB6701C88858700F36C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				374CB6711C88858700F36C1E /* GSTabBarView.h */,
+				374CB6721C88858700F36C1E /* GSTabBarView.m */,
+				374CB6731C88858700F36C1E /* GSTabBarView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		374CB67E1C88862600F36C1E /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				374CB67F1C88862600F36C1E /* Controller */,
+				374CB6821C88862600F36C1E /* View */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		374CB67F1C88862600F36C1E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				374CB6801C88862600F36C1E /* GSLoginController.h */,
+				374CB6811C88862600F36C1E /* GSLoginController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		374CB6821C88862600F36C1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		37D8A1B11C872ACE0059A875 /* Strategy(攻略详情) */ = {
 			isa = PBXGroup;
 			children = (
+				37E9B3611C89276F008DB694 /* Model  */,
+				374CB6701C88858700F36C1E /* View */,
 				37D8A1B21C872ACE0059A875 /* Controller */,
 			);
 			path = "Strategy(攻略详情)";
@@ -422,6 +478,10 @@
 		37D8A1B21C872ACE0059A875 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				374CB66A1C88857000F36C1E /* GSPurchaseController.h */,
+				374CB66B1C88857000F36C1E /* GSPurchaseController.m */,
+				374CB66C1C88857000F36C1E /* GSTaoBaoController.h */,
+				374CB66D1C88857000F36C1E /* GSTaoBaoController.m */,
 				37D8A1B31C872ACE0059A875 /* GSStrategyController.h */,
 				37D8A1B41C872ACE0059A875 /* GSStrategyController.m */,
 			);
@@ -471,6 +531,11 @@
 		37D8A1C91C872ADD0059A875 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				374CB6761C8885A900F36C1E /* GSExtenssion.h */,
+				374CB6771C8885A900F36C1E /* GSExtenssion.m */,
+				374CB6781C8885A900F36C1E /* GSHeader.h */,
+				374CB6791C8885A900F36C1E /* GSHeader.m */,
+				374CB67A1C8885A900F36C1E /* GSHeader.xib */,
 				37D8A1CA1C872ADD0059A875 /* GSFirst.h */,
 				37D8A1CB1C872ADD0059A875 /* GSFirst.m */,
 				37D8A1CC1C872ADD0059A875 /* GSFirst.xib */,
@@ -514,6 +579,15 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		37E9B3611C89276F008DB694 /* Model  */ = {
+			isa = PBXGroup;
+			children = (
+				37E9B3621C89284E008DB694 /* GSTaobao.h */,
+				37E9B3631C89284E008DB694 /* GSTaobao.m */,
+			);
+			path = "Model ";
+			sourceTree = "<group>";
+		};
 		37FB25731C8465960003F3D3 = {
 			isa = PBXGroup;
 			children = (
@@ -555,6 +629,7 @@
 		37FB25961C84663A0003F3D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				374CB67E1C88862600F36C1E /* Login(登录) */,
 				37D8A1B61C872ADD0059A875 /* GiftShop(礼品) */,
 				37D8A1B11C872ACE0059A875 /* Strategy(攻略详情) */,
 				C2AAC67F1C8674280070384C /* Hot(热门) */,
@@ -978,12 +1053,8 @@
 		C2AAC6801C8674280070384C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C2AAC6811C8674280070384C /* GSDetailViewController.h */,
-				C2AAC6821C8674280070384C /* GSDetailViewController.m */,
 				C2AAC6831C8674280070384C /* GSHotController.h */,
 				C2AAC6841C8674280070384C /* GSHotController.m */,
-				C2AAC6851C8674280070384C /* GT_NetTools.h */,
-				C2AAC6861C8674280070384C /* GT_NetTools.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1087,6 +1158,7 @@
 			files = (
 				37D8A1DD1C872ADD0059A875 /* GSFirst.xib in Resources */,
 				37FB26B11C8489540003F3D3 /* GiftShop.plist in Resources */,
+				374CB6751C88858700F36C1E /* GSTabBarView.xib in Resources */,
 				C2AAC69B1C8677610070384C /* GSHotCell.xib in Resources */,
 				834143911C86701400EAB4C9 /* PresentViewController.xib in Resources */,
 				37FB26841C8466BA0003F3D3 /* SVProgressHUD.bundle in Resources */,
@@ -1099,6 +1171,7 @@
 				C2AAC6A81C86D6AB0070384C /* blueArrow@2x.png in Resources */,
 				C2AAC6A71C86D6AB0070384C /* blueArrow.png in Resources */,
 				37FB258A1C8465960003F3D3 /* Main.storyboard in Resources */,
+				374CB67D1C8885A900F36C1E /* GSHeader.xib in Resources */,
 				37FB26A71C847C8F0003F3D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1123,7 +1196,6 @@
 				37D8A1D51C872ADD0059A875 /* GSGiftShopScrollController.m in Sources */,
 				37FB25C91C84667D0003F3D3 /* AFSecurityPolicy.m in Sources */,
 				37D8A1F61C872B040059A875 /* SDCollectionViewCell.m in Sources */,
-				C2AAC6901C8674280070384C /* GT_NetTools.m in Sources */,
 				37FB26761C8466AF0003F3D3 /* UIImage+WebP.m in Sources */,
 				37FB268B1C8467BC0003F3D3 /* GSNavViewController.m in Sources */,
 				37D8A1F71C872B040059A875 /* SDCycleScrollView.m in Sources */,
@@ -1136,6 +1208,7 @@
 				37FB25CD1C84667D0003F3D3 /* AFURLSessionManager.m in Sources */,
 				37D8A1D71C872ADD0059A875 /* GSTextField.m in Sources */,
 				37FB26471C8466A50003F3D3 /* UIView+MJExtension.m in Sources */,
+				374CB6741C88858700F36C1E /* GSTabBarView.m in Sources */,
 				37FB26971C8468040003F3D3 /* GSMineController.m in Sources */,
 				37FB26441C8466A50003F3D3 /* MJRefreshConst.m in Sources */,
 				37FB26781C8466AF0003F3D3 /* UIImageView+WebCache.m in Sources */,
@@ -1148,6 +1221,7 @@
 				37FB263C1C8466A50003F3D3 /* MJRefreshAutoStateFooter.m in Sources */,
 				37FB25CC1C84667D0003F3D3 /* AFURLResponseSerialization.m in Sources */,
 				37FB269A1C84684D0003F3D3 /* UIView+GSExtenssion.m in Sources */,
+				374CB66E1C88857000F36C1E /* GSPurchaseController.m in Sources */,
 				C2AAC6961C8674CC0070384C /* GSHotView.m in Sources */,
 				37D8A1DB1C872ADD0059A875 /* GSScroll.m in Sources */,
 				37FB26371C8466A50003F3D3 /* MJRefreshComponent.m in Sources */,
@@ -1163,8 +1237,8 @@
 				37FB266A1C8466AF0003F3D3 /* MKAnnotationView+WebCache.m in Sources */,
 				37FB26391C8466A50003F3D3 /* MJRefreshHeader.m in Sources */,
 				37FB26A31C8470120003F3D3 /* GSTabBarController.m in Sources */,
-				C2AAC68E1C8674280070384C /* GSDetailViewController.m in Sources */,
 				37FB26AF1C8487570003F3D3 /* GSSearchController.m in Sources */,
+				374CB6831C88862600F36C1E /* GSLoginController.m in Sources */,
 				37D8A1DF1C872ADD0059A875 /* GSGiftShopCell.m in Sources */,
 				37FB26021C84669C0003F3D3 /* MJPropertyType.m in Sources */,
 				37FB26831C8466BA0003F3D3 /* SVIndefiniteAnimatedView.m in Sources */,
@@ -1196,6 +1270,7 @@
 				37FB266F1C8466AF0003F3D3 /* SDWebImageDownloader.m in Sources */,
 				834143941C86701400EAB4C9 /* GSCategoryModel.m in Sources */,
 				37D8A1DE1C872ADD0059A875 /* GSFirstCell.m in Sources */,
+				37E9B3641C89284E008DB694 /* GSTaobao.m in Sources */,
 				37FB25E31C8466880003F3D3 /* UIButton+AFNetworking.m in Sources */,
 				37FB263A1C8466A50003F3D3 /* MJRefreshAutoGifFooter.m in Sources */,
 				37FB26741C8466AF0003F3D3 /* UIImage+GIF.m in Sources */,
@@ -1208,9 +1283,12 @@
 				37FB26701C8466AF0003F3D3 /* SDWebImageDownloaderOperation.m in Sources */,
 				37FB25E71C8466880003F3D3 /* UIWebView+AFNetworking.m in Sources */,
 				37FB26751C8466AF0003F3D3 /* UIImage+MultiFormat.m in Sources */,
+				374CB67C1C8885A900F36C1E /* GSHeader.m in Sources */,
 				37FB26791C8466AF0003F3D3 /* UIView+WebCacheOperation.m in Sources */,
 				37420C861C857843002CE740 /* Foundation+Log.m in Sources */,
 				C2AAC6AA1C86D6AB0070384C /* FCXRefreshFooterView.m in Sources */,
+				374CB66F1C88857000F36C1E /* GSTaoBaoController.m in Sources */,
+				374CB67B1C8885A900F36C1E /* GSExtenssion.m in Sources */,
 				37FB25FE1C84669C0003F3D3 /* MJExtensionConst.m in Sources */,
 				37FB26041C84669C0003F3D3 /* NSObject+MJCoding.m in Sources */,
 				37D8A1D91C872ADD0059A875 /* GSFirstModel.m in Sources */,

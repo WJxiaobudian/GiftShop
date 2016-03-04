@@ -11,6 +11,6 @@
 @interface GSTabBarView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *LoveButton;
 @property (weak, nonatomic) IBOutlet UIButton *shopButton;
-@property (weak, nonatomic) IBOutlet UILabel *testLabel;
+
 + (instancetype)first;
 @end

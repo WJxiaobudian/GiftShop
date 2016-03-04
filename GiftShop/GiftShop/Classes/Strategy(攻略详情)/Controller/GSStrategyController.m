@@ -76,17 +76,20 @@
     label.textColor = [UIColor whiteColor];
     
     self.label = label;
-    
-    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeFlat];
+//    [SVProgressHUD showWithStatus:@"正在加载"];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
     self.numArray = [NSMutableArray array];
     [[AFHTTPSessionManager manager] GET:self.urlString parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        [SVProgressHUD dismiss];
-        self.numArray = responseObject[@"data"][@"item_ad_monitors"];
-        [self.webView loadHTMLString:responseObject[@"data"][@"content_html"] baseURL:nil];
-       [self.image sd_setImageWithURL:[NSURL URLWithString:responseObject[@"data"][@"cover_webp_url"]]];
-        
+        NSDictionary *dict = responseObject[@"data"];
+        self.numArray = dict[@"item_ad_monitors"];
+        [self.webView loadHTMLString:dict[@"content_html"] baseURL:nil];
+       [self.image sd_setImageWithURL:[NSURL URLWithString:dict[@"cover_image_url"]]];
         label.text = self.titleLabel;
+        
+        [SVProgressHUD dismiss];
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [SVProgressHUD showErrorWithStatus:@"数据加载错误"];
     }];
 }
 

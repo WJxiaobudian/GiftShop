@@ -75,9 +75,9 @@ static NSString *const firstID = @"first";
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
- 
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(leftClick)];
+    
     self.navigationItem.title = @"礼品屋";
    
      self.urlString = self.urlString;
@@ -94,11 +94,9 @@ static NSString *const firstID = @"first";
     
 }
 
-
 - (void)setUrlString:(NSString *)urlString {
     _urlString = urlString;
 }
-
 
 - (void)setupNav {
 
