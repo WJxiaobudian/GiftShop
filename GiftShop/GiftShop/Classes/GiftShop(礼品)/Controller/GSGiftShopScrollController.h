@@ -14,4 +14,7 @@
 
 @property (nonatomic, copy) NSString *titleLabel;
 
+@property (nonatomic, copy) NSString *nameTitle;
+
 @end
+

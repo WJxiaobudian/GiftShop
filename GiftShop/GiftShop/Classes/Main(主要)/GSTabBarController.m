@@ -39,16 +39,16 @@
 - (void)setupChild {
     
     GSGiftShopViewController *giftShop = [[GSGiftShopViewController alloc] init];
-    [self setupController:giftShop title:@"礼品屋" stateImage:@"tabBar_essence_icon" highImage:@"tabBar_essence_click_icon"];
+    [self setupController:giftShop title:@"礼品屋" stateImage:@"home_tab_home_btn@2x" highImage:@"home_tab_home_selected_btn@2x"];
     
     GSHotController *hot = [[GSHotController alloc] init];
-    [self setupController:hot title:@"热门" stateImage:@"tabBar_new_icon" highImage:@"tabBar_new_click_icon"];
+    [self setupController:hot title:@"热门" stateImage:@"home_tab_branc_btn@2x" highImage:@"home_tab_branc_selected_btn@2x"];
     
     GSCategoryController *category = [[GSCategoryController alloc] init];
-    [self setupController:category title:@"分类" stateImage:@"tabBar_me_icon" highImage:@"tabBar_me_click_icon"];
+    [self setupController:category title:@"分类" stateImage:@"home_tab_saunter_btn@2x" highImage:@"home_tab_saunter_selected_btn@2x"];
     
     GSMineController *mine = [[GSMineController alloc] init];
-    [self setupController:mine title:@"我的" stateImage:@"tabBar_friendTrends_icon" highImage:@"tabBar_friendTrends_click_icon"];
+    [self setupController:mine title:@"我的" stateImage:@"home_tab_personal_btn@2x" highImage:@"home_tab_personal_selected_btn@2x"];
     
 }
 
@@ -56,12 +56,16 @@
     
     GSNavViewController *nav = [[GSNavViewController alloc] initWithRootViewController:vc];
     
+    
+    
     vc.title = title;
     
     vc.tabBarItem.image = [UIImage imageNamed:image];
     
     vc.tabBarItem.selectedImage = [UIImage imageNamed:highImage];
-    vc.view.backgroundColor = [UIColor colorWithRed:223/255.0 green:223/255.0 blue:223/255.0 alpha:1.0];
+   self.tabBar.tintColor = [UIColor redColor];
+   vc.tabBarItem.imageInsets=UIEdgeInsetsMake(6, 0,-6, 0);
+    vc.view.backgroundColor = XMGGlobalBg;
     
     [self addChildViewController:nav];
 }

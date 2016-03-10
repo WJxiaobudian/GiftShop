@@ -13,11 +13,9 @@
     return [[[NSBundle mainBundle] loadNibNamed:@"GSTabBarView" owner:nil options:nil] lastObject];
 }
 
-- (void)awakeFromNib {
-    self.LoveButton.layer.masksToBounds = YES;
-    self.LoveButton.layer.cornerRadius = 20;
-    
-    self.shopButton.layer.masksToBounds = YES;
-    self.shopButton.layer.cornerRadius = 20;
-}
+//- (void)setFrame:(CGRect)frame {
+//    self.shopButton.layer.masksToBounds = YES;
+//    self.shopButton.layer.cornerRadius = 20;
+//    
+//}
 @end

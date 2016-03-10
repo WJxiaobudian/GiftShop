@@ -20,6 +20,8 @@
 // 详情页面
 @property (nonatomic, copy) NSString *url;
 
+@property (nonatomic, copy) NSString *Nid;
+
 - (instancetype)initWithDict:(NSDictionary *)dict;
 
 + (instancetype)hotModelWithDict:(NSDictionary *)dict;

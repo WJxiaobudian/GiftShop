@@ -7,8 +7,8 @@
 //
 
 #import "GSFirst.h"
-#import "UIImageView+WebCache.h"
 #import "GSFirstModel.h"
+#import "GSCategoryModel.h"
 @interface GSFirst ()
 @property (weak, nonatomic) IBOutlet UIImageView *PhotoImage;
 
@@ -22,6 +22,11 @@
     [self.PhotoImage sd_setImageWithURL:[NSURL URLWithString:firstModel.image_url]];
 }
 
+- (void)setCategoryModel:(GSCategoryModel *)categoryModel {
+    
+    _categoryModel  = categoryModel;
+    [self.PhotoImage sd_setImageWithURL:[NSURL URLWithString:categoryModel.banner_image_url]];
+}
 
 + (instancetype)first {
     return [[[NSBundle mainBundle] loadNibNamed:@"GSFirst" owner:nil options:nil] lastObject];

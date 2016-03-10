@@ -7,10 +7,12 @@
 //
 
 #import "GSHotCell.h"
-#import "UIImageView+WebCache.h"
+
+#import "GSHotModel.h"
 @implementation GSHotCell
 
 - (void)setModel:(GSHotModel *)model {
+    
     
     self.priceLabel.text = model.price;
     self.titleLabel.text = model.name;

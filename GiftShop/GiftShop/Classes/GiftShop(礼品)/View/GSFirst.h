@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 @class GSFirstModel;
+@class GSCategoryModel;
 @interface GSFirst : UIView
 
 @property (nonatomic, strong) GSFirstModel *firstModel;
+
+@property (nonatomic, strong) GSCategoryModel *categoryModel;
 
 + (instancetype)first;
 

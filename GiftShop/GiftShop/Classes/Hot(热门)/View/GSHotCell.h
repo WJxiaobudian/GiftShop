@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GSHotModel.h"
+@class GSHotModel;
 @interface GSHotCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UIImageView *photoImage;

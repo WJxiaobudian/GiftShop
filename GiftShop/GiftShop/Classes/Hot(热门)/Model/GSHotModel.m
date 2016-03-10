@@ -11,7 +11,9 @@
 @implementation GSHotModel
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
-    
+    if ([key isEqualToString:@"id"]) {
+        self.Nid = value;
+    }
 }
 
 - (instancetype)initWithDict:(NSDictionary *)dict {
@@ -27,6 +29,7 @@
     
     model.url = dict[@"url"];
     
+    model.Nid = dict[@"id"];
     return model;
     
 }

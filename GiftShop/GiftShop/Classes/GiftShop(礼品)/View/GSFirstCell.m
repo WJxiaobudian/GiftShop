@@ -39,11 +39,13 @@
     CGFloat W = 120;
     CGFloat H = 120;
     
+    
     for ( int i = 1; i < data.count; i ++) {
         GSFirst *firstView = [GSFirst first];
         X = (i - 1) * W;
         firstView.frame = CGRectMake(X, Y, W, H);
         firstView.firstModel = self.data[i];
+        firstView.backgroundColor = XMGGlobalBg;
         [self.scrollView addSubview:firstView];
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -51,6 +53,7 @@
         button.tag = i;
         [button addTarget:self action:@selector(firstViewClick:) forControlEvents:UIControlEventTouchUpInside];
         [self.scrollView addSubview:button];
+         self.scrollView.bounces = YES;
     }
     self.scrollView.contentSize = CGSizeMake((data.count - 1 ) * W, 0);
 }

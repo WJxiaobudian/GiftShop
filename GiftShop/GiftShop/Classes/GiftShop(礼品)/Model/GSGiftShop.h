@@ -14,6 +14,8 @@
 
 @property (nonatomic, copy) NSString *title;
 
+@property (nonatomic, copy) NSString *subtitle;
+
 @property (nonatomic, assign) NSInteger likes_count;
 
 @property (nonatomic, copy) NSString *url;

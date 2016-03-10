@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "GSTabBarController.h"
+#import "GSNavViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,16 +18,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // Override point for customization after application launch.
-    NSString *str=@"1456804800";//时间戳
-    NSTimeInterval time=[str doubleValue]+28800;//因为时差问题要加8小时 == 28800 sec
-    NSDate *detaildate=[NSDate dateWithTimeIntervalSince1970:time];
+
+    sleep(1.5);
     self.window = [[UIWindow alloc] init];
    
     self.window.frame = [UIScreen mainScreen].bounds;
     
      [self.window  makeKeyAndVisible];
+    
     
     GSTabBarController *tab = [[GSTabBarController alloc] init];
     self.window.rootViewController = tab;

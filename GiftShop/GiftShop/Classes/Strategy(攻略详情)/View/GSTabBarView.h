@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GSTabBarView : UIView
-@property (weak, nonatomic) IBOutlet UIButton *LoveButton;
+
 @property (weak, nonatomic) IBOutlet UIButton *shopButton;
 
 + (instancetype)first;

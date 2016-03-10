@@ -10,6 +10,6 @@
 
 @interface UIBarButtonItem (GSExtenssion)
 
-+ (instancetype)itemWithImage:(NSString *)image highImage:(NSString *)highImage target:(id)target action:(SEL)action;
++ (instancetype)itemWithImage:(NSString *)image target:(id)target action:(SEL)action;
 
 @end

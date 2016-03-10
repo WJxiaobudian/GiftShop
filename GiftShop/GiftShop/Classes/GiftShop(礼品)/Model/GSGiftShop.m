@@ -33,7 +33,7 @@
     
     giftShop.content_url = dict[@"content_url"];
     
-   
+    giftShop.subtitle = dict[@"subtitle"];
     
     NSString *str=dict[@"created_at"];//时间戳
     NSTimeInterval time=[str doubleValue]+28800;//因为时差问题要加8小时 == 28800 sec

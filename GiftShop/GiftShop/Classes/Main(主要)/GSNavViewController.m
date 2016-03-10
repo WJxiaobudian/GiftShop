@@ -18,10 +18,13 @@
     
     UINavigationBar *bar = [UINavigationBar appearance];
     [bar setBackgroundImage:[UIImage imageNamed:@"friendsTrend_login_click"] forBarMetrics:UIBarMetricsDefault];
+//    bar.barTintColor = [UIColor redColor];
     bar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+   
+    
+    
     
 }
-
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     
     if (self.childViewControllers.count > 0) {
@@ -50,9 +53,11 @@
 - (void)backClick {
     [self popViewControllerAnimated:YES];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+     
 }
 
 

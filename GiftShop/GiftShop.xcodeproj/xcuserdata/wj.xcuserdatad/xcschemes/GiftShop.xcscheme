@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "37FB257B1C8465960003F3D3"
-               BuildableName = "GiftShop.app"
+               BuildableName = "e&#x5e97;&#x6709;&#x793c;.app"
                BlueprintName = "GiftShop"
                ReferencedContainer = "container:GiftShop.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB257B1C8465960003F3D3"
-            BuildableName = "GiftShop.app"
+            BuildableName = "e&#x5e97;&#x6709;&#x793c;.app"
             BlueprintName = "GiftShop"
             ReferencedContainer = "container:GiftShop.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB257B1C8465960003F3D3"
-            BuildableName = "GiftShop.app"
+            BuildableName = "e&#x5e97;&#x6709;&#x793c;.app"
             BlueprintName = "GiftShop"
             ReferencedContainer = "container:GiftShop.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "37FB257B1C8465960003F3D3"
-            BuildableName = "GiftShop.app"
+            BuildableName = "e&#x5e97;&#x6709;&#x793c;.app"
             BlueprintName = "GiftShop"
             ReferencedContainer = "container:GiftShop.xcodeproj">
          </BuildableReference>

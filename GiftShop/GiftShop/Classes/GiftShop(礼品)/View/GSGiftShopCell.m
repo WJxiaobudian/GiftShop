@@ -8,7 +8,7 @@
 
 #import "GSGiftShopCell.h"
 #import "GSGiftShop.h"
-#import "UIImageView+WebCache.h"
+
 @interface GSGiftShopCell ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
@@ -16,6 +16,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIImageView *contentUrl;
+@property (weak, nonatomic) IBOutlet UILabel *Label;
 
 @end
 
@@ -36,6 +37,11 @@
 }
 
 - (void)setFrame:(CGRect)frame {
+    
+    self.Label.layer.masksToBounds = YES;
+    self.Label.layer.cornerRadius = 15;
+    
+    
     CGFloat margin = 10;
     
     frame.origin.x = 10;

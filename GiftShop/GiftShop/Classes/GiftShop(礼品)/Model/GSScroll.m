@@ -32,6 +32,9 @@
     
     scroll.target_id = dict[@"target_id"];
     scroll.title = dict[@"target"][@"title"];
+    
+    scroll.target = dict[@"target"];
+    
     return scroll;
     
 }
